@@ -51,7 +51,7 @@ const Particles = ({ count = 200 }) => {
         color="#ffffff"
         size={0.05}
         transparent
-        opacity={0.9}
+        opacity={1}
         depthWrite={false}
       />
     </points>
