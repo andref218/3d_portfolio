@@ -5,6 +5,7 @@ import { useMediaQuery } from "react-responsive";
 import { Room } from "./Room";
 import * as THREE from "three";
 import Particles from "./Particles";
+import AutoRotateRoom from "./AutoRotateRoom";
 
 const HeroExperience = () => {
   const isTablet = useMediaQuery({ query: "(max-width:1024px)" });
@@ -54,26 +55,9 @@ const HeroExperience = () => {
         />
         <pointLight position={[0, 1, 0]} intensity={10} color="#7209b7" />
         <pointLight position={[1, 2, -2]} intensity={10} color="#0d00a4" />
-        <Particles count={100} />
-        <OrbitControls
-          autoRotate
-          autoRotateSpeed={0.5}
-          enablePan={false}
-          enableZoom={!isTablet}
-          maxDistance={15}
-          minDistance={5}
-          minPolarAngle={Math.PI / 5}
-          maxPolarAngle={Math.PI / 2}
-          onStart={() => setShowHint(false)}
-        />
 
-        <group
-          scale={isMobile ? 0.7 : 1}
-          position={[0, -3.5, 0]}
-          rotation={[0, Math.PI / -2.6, 0]}
-        >
-          <Room />
-        </group>
+        <AutoRotateRoom isMobile={isMobile} />
+        <Particles count={100} />
       </Canvas>
       {showHint && (
         <div
