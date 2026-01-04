@@ -42,10 +42,10 @@ const Showcase = () => {
   }, []);
 
   return (
-    <section id="work" ref={sectionRef} className="app-showcase">
+    <section id="work" ref={sectionRef} className="app-showcase scroll-mt-5">
       <div className="w-full">
         <h2 className="text-center mb-20 text-2xl md:text-3xl lg:text-4xl text-white-50">
-          Some of my projects:
+          Some of my Projects:
         </h2>
         <div className="showcaselayout">
           {/* LEFT SIDE*/}

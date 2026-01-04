@@ -48,7 +48,7 @@ section {
   }
 
   .section-padding {
-    @apply px-5 md:px-10 md:mt-40 mt-20;
+    @apply px-5 md:px-10 md:mt-2 mt-20;
   }
 
   .mt-responsive {
@@ -110,7 +110,7 @@ section {
     }
 
     &.not-scrolled {
-      @apply md:top-10 top-0 bg-transparent;
+      @apply md:top-5 top-0 bg-transparent;
     }
 
     .inner {
@@ -238,17 +238,46 @@ section {
     @apply md:w-40 w-32;
   }
 
+  /* Timeline vertical */
+
+  .timeline-container {
+    @apply relative flex justify-center max-w-6xl mx-auto w-full;
+  }
+
   .timeline-wrapper {
-    @apply absolute top-0 xl:left-[35.5vw] md:left-10 left-5 h-full flex justify-center;
+    @apply flex-shrink-0 flex flex-col items-center;
+    width: 3rem;
   }
 
   .timeline {
-    @apply absolute z-30 h-[110%] -top-10 w-14 md:w-28 bg-black;
+    @apply w-1 bg-gradient-to-b from-[#62e0ff] via-[#fd5c79] to-[#6d45ce] [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]
+    [-webkit-mask-image:linear-gradient(to_bottom,black_96%,transparent_100%)] origin-top h-full;
   }
 
-  .timeline-logo {
-    @apply md:size-20 size-10 flex-none rounded-full flex justify-center items-center md:-translate-y-7 border border-black-50 bg-black-100;
+  .content-wrapper {
+    @apply flex-1 flex flex-col gap-24 pl-8 md:pl-12 lg:pl-16;
   }
+
+  /* Responsive: mobile */
+  @media (max-width: 768px) {
+    .timeline-container {
+      @apply flex-col items-center;
+    }
+
+    .timeline-wrapper {
+      @apply w-2 mb-6;
+    }
+
+    .content-wrapper {
+      @apply pl-0;
+    }
+  }
+  /* Logo circles */
+  .timeline-logo {
+    @apply w-12 h-12 rounded-full border border-black-50 bg-black-100 flex justify-center items-center z-10;
+  }
+
+  /* Logo circle aligned with timeline */
 
   .exp-card-wrapper {
     @apply flex flex-col-reverse xl:flex-row xl:gap-20 gap-10 justify-between;
@@ -363,18 +392,6 @@ section {
 }
 
 /* Hero Text slider ends */
-
-.gradient-line {
-  width: 2px;
-  background: linear-gradient(
-    0deg,
-    rgba(69, 222, 196, 0) 0%,
-    #62e0ff 25%,
-    #52aeff 37.51%,
-    #fd5c79 62.83%,
-    #6d45ce 92.91%
-  );
-}
 
 .gradient-edge:nth-of-type(1) {
   left: 0;
