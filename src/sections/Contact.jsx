@@ -1,3 +1,4 @@
+import ContactExperience from "../components/ContactModels/ContactExperience";
 import TitleHeader from "../components/TitleHeader";
 
 const Contact = () => {
@@ -61,7 +62,11 @@ const Contact = () => {
             </div>
           </div>
           {/* RIGHT: 3D MODEL*/}
-          <div className="xl:col-span-7 min-h-96"></div>
+          <div className="xl:col-span-7 min-h-96">
+            <div className="w-full h-full bg-[#cd7c2e] hover:cursor-grab rounded-3xl overflow-hidden">
+              <ContactExperience />
+            </div>
+          </div>
         </div>
       </div>
     </section>
