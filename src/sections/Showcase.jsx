@@ -43,7 +43,7 @@ const Showcase = () => {
 
   return (
     <section id="work" ref={sectionRef} className="app-showcase scroll-mt-5">
-      <div className="w-full">
+      <div className="w-full mb-10">
         <h2 className="text-center mb-20 text-2xl md:text-3xl lg:text-4xl text-white-50">
           Some of my Projects:
         </h2>

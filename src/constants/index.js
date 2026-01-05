@@ -71,3 +71,30 @@ export const expCards = [
     ],
   },
 ];
+
+export const techStackIcons = [
+  {
+    name: "React Developer",
+    modelPath: "/models/react_logo-transformed.glb",
+    scale: 1,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Flutter Developer",
+    modelPath: "/models/flutter_logo.glb",
+    scale: 28,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Interactive Developer",
+    modelPath: "/models/three.js-transformed.glb",
+    scale: 0.05,
+    rotation: [0, 0, 0],
+  },
+  {
+    name: "Project Manager",
+    modelPath: "/models/git-svg-transformed.glb",
+    scale: 0.05,
+    rotation: [0, -Math.PI / 4, 0],
+  },
+];

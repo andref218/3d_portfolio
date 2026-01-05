@@ -6,6 +6,7 @@ import Showcase from "./sections/Showcase";
 import NavBar from "./components/NavBar";
 import AnimatedCounter from "./components/AnimatedCounter";
 import Journey from "./sections/Journey";
+import TechStack from "./sections/TechStack";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <AnimatedCounter />
       <Showcase />
       <Journey />
+      <TechStack />
     </>
   );
 }
