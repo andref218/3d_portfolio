@@ -27,7 +27,10 @@ const TechStack = () => {
   });
 
   return (
-    <section id="skills" className="flex-center section-padding mb-10">
+    <section
+      id="skills"
+      className="flex-center section-padding mb-30 scroll-mt-25"
+    >
       <div className="w-full h-full md:px-10 px-5">
         <TitleHeader
           sub="🤝 What I bring to the table"
