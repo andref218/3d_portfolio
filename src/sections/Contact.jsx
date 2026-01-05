@@ -1,7 +1,44 @@
 import ContactExperience from "../components/ContactModels/ContactExperience";
 import TitleHeader from "../components/TitleHeader";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const formRef = useRef(null);
+  const [formData, setformData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setformData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_API_KEY
+      );
+    } catch (error) {
+      console.log("EMAILJS ERROR", error);
+    } finally {
+      setLoading(false);
+    }
+    setformData({ name: "", email: "", message: "" });
+  };
+
   return (
     <section id="contact" className="flex-center section-padding mb-10">
       <div className="w-full h-full md:px-10 px-5">
@@ -14,7 +51,11 @@ const Contact = () => {
           {/* LEFT: CONTACT FORM*/}
           <div className="xl:col-span-5">
             <div className="flex-center card-border rounded-xl p-10">
-              <form className="w-full flex flex-col gap-7">
+              <form
+                ref={formRef}
+                onSubmit={handleSubmit}
+                className="w-full flex flex-col gap-7"
+              >
                 <div>
                   <label htmlFor="name">Name</label>
                   <input
@@ -22,8 +63,8 @@ const Contact = () => {
                     id="name"
                     name="name"
                     placeholder="Your name"
-                    //value={formData.name}
-                    //onChange={handleChange}
+                    value={formData.name}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -34,8 +75,8 @@ const Contact = () => {
                     id="email"
                     name="email"
                     placeholder="Your email"
-                    //value={formData.email}
-                    //onChange={handleChange}
+                    value={formData.email}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -46,8 +87,8 @@ const Contact = () => {
                     id="message"
                     name="message"
                     placeholder="Your message"
-                    //value={formData.message}
-                    //onChange={handleChange}
+                    value={formData.message}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -56,7 +97,9 @@ const Contact = () => {
                   className="w-full py-4 bg-white text-black font-semibold rounded-md 
                   flex justify-center items-center bg-white-50 cursor-pointer"
                 >
-                  <p className="text"> Send message</p>
+                  <p className="text">
+                    {loading ? "Sending... " : "Send message"}
+                  </p>
                 </button>
               </form>
             </div>
