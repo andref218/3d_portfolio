@@ -98,3 +98,16 @@ export const techStackIcons = [
     rotation: [0, -Math.PI / 4, 0],
   },
 ];
+
+export const socialImgs = [
+  {
+    name: "Github",
+    url: "https://github.com/andref218",
+    imgPath: "/images/github.png",
+  },
+  {
+    name: "linkedin",
+    url: "https://www.linkedin.com/in/andre-fonseca218",
+    imgPath: "/images/linkedin.png",
+  },
+];

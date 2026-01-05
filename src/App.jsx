@@ -8,6 +8,7 @@ import AnimatedCounter from "./components/AnimatedCounter";
 import Journey from "./sections/Journey";
 import TechStack from "./sections/TechStack";
 import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Journey />
       <TechStack />
       <Contact />
+      <Footer />
     </>
   );
 }

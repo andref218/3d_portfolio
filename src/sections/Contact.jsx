@@ -71,7 +71,7 @@ const Contact = () => {
                 <div>
                   <label htmlFor="email">Email</label>
                   <input
-                    type="text"
+                    type="email"
                     id="email"
                     name="email"
                     placeholder="Your email"

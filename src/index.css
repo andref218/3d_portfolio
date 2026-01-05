@@ -345,7 +345,7 @@ section {
       }
 
       img {
-        @apply inline-block;
+        @apply w-5 h-5 md:w-5 md:h-5 object-contain;
       }
     }
   }
