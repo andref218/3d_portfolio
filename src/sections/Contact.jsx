@@ -12,6 +12,7 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,6 +25,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setSuccess(false);
     try {
       await emailjs.sendForm(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -31,6 +33,7 @@ const Contact = () => {
         formRef.current,
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_API_KEY
       );
+      setSuccess(true);
     } catch (error) {
       console.log("EMAILJS ERROR", error);
     } finally {
@@ -101,6 +104,11 @@ const Contact = () => {
                     {loading ? "Sending... " : "Send message"}
                   </p>
                 </button>
+                {success && (
+                  <p className="text-green-500 font-semibold mt-2">
+                    Message sent successfully! Thanks for reaching out.
+                  </p>
+                )}
               </form>
             </div>
           </div>

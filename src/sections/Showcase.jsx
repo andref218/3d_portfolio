@@ -51,10 +51,26 @@ const Showcase = () => {
           {/* LEFT SIDE*/}
           <div className="first-project-wrapper" ref={project1Ref}>
             <div className="">
-              <img src="/images/movieStreamApp1.png" alt="CineFlow"></img>
+              <a
+                href="https://github.com/andref218/movieStreamApp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
+              >
+                <img src="/images/movieStreamApp1.png" alt="CineFlow"></img>
+              </a>
             </div>
             <div className="text-content">
-              <h2>CineFlow - A Powerful, User-Friendly Streaming Platform</h2>
+              <h2>
+                <a
+                  href="https://github.com/andref218/movieStreamApp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
+                >
+                  CineFlow - A Powerful, User-Friendly Streaming Platform
+                </a>
+              </h2>
               <p className="text-white-50 md:text-xl">
                 An app built with React & TailwindCSS for a fast, user-friendly
                 experience.
@@ -65,18 +81,51 @@ const Showcase = () => {
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={project2Ref}>
               <div>
-                <img
-                  src="/images/aiImageGenerator1.png"
-                  alt="AI Image Generator"
-                />
+                <a
+                  href="https://github.com/andref218/ai_image_generator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
+                >
+                  <img
+                    src="/images/aiImageGenerator1.png"
+                    alt="AI Image Generator"
+                  />
+                </a>
               </div>
-              <h2>AI Image Generator</h2>
+
+              <h2>
+                <a
+                  href="https://github.com/andref218/ai_image_generator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
+                >
+                  AI Image Generator
+                </a>
+              </h2>
             </div>
             <div className="project" ref={project3Ref}>
               <div>
-                <img src="/images/nasaApp1.png" alt="APOD Project" />
+                <a
+                  href="https://github.com/andref218/nasaApp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
+                >
+                  <img src="/images/nasaApp1.png" alt="APOD Project" />
+                </a>
               </div>
-              <h2>APOD Project</h2>
+              <h2>
+                <a
+                  href="https://github.com/andref218/nasaApp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
+                >
+                  APOD Project
+                </a>
+              </h2>
             </div>
           </div>
         </div>

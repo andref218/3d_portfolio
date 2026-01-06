@@ -12,10 +12,7 @@ const Footer = () => {
           {socialImgs.map((img) => {
             return (
               <a className="icon" target="_blank" href={img.url} key={img.url}>
-                <img
-                  src={img.imgPath}
-                  className={img.name === "Github" ? "scale-140" : ""}
-                />
+                <img src={img.imgPath} />
               </a>
             );
           })}

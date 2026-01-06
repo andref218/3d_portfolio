@@ -358,7 +358,7 @@ section {
       }
 
       img {
-        @apply w-5 h-5 md:w-5 md:h-5 object-contain;
+        @apply w-5 h-5 md:w-7 md:h-7 object-contain;
       }
     }
   }
