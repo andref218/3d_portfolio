@@ -4,13 +4,16 @@ Command: npx gltfjsx@6.5.3 computer-optimized.glb -T
 Files: computer-optimized.glb [486.38KB] > /Users/andrefonseca/ReactProjects_Github/3dPortfolio2025/public/models/computer-optimized-transformed.glb [39.72KB] (92%)
 */
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 
-export function Computer(props) {
+export function Computer({ onLoaded, ...props }) {
   const { nodes, materials } = useGLTF(
     "/models/computer-optimized-transformed.glb"
   );
+  useEffect(() => {
+    if (onLoaded) onLoaded();
+  }, [nodes, materials, onLoaded]);
   return (
     <group {...props} dispose={null}>
       <group position={[-4.005, 67.549, 58.539]}>

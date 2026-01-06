@@ -9,6 +9,7 @@ import Journey from "./sections/Journey";
 import TechStack from "./sections/TechStack";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import About from "./sections/About";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <NavBar />
       <Hero />
       <AnimatedCounter />
+      <About />
       <Showcase />
       <Journey />
       <TechStack />

@@ -3,7 +3,7 @@ import { useFrame } from "@react-three/fiber";
 import { Room } from "./Room";
 import { OrbitControls } from "@react-three/drei";
 
-const AutoRotateRoom = ({ isMobile }) => {
+const AutoRotateRoom = ({ isMobile, onLoaded }) => {
   const controlsRef = useRef();
 
   const minAzimuth = -1.5;
@@ -17,7 +17,7 @@ const AutoRotateRoom = ({ isMobile }) => {
       position={[0, -3.5, 0]} // model position
       rotation={[0, initialRotationY, 0]}
     >
-      <Room />
+      <Room onLoaded={onLoaded} />
 
       <OrbitControls
         autoRotate

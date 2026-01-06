@@ -1,10 +1,12 @@
 import * as THREE from "three";
 import { Computer } from "./Computer";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Html } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Particles from "./Particles";
+import { Suspense, useState } from "react";
 
 const ContactExperience = () => {
+  const [loading, setLoading] = useState(true);
   const minAzimuth = -1.5;
   const maxAzimuth = 0.6;
   return (
@@ -28,21 +30,27 @@ const ContactExperience = () => {
         minDistance={5} // zoom min
         maxDistance={15} // zoom max
       />
+      <Suspense>
+        <group scale={[1, 1, 1]}>
+          <mesh
+            receiveShadow
+            position={[0, -1.5, 0]}
+            rotation={[-Math.PI / 2, 0, 0]}
+          >
+            <planeGeometry args={[30, 30]} />
+            <meshStandardMaterial color="#ffffff" transparent opacity={0.2} />
+          </mesh>
+        </group>
 
-      <group scale={[1, 1, 1]}>
-        <mesh
-          receiveShadow
-          position={[0, -1.5, 0]}
-          rotation={[-Math.PI / 2, 0, 0]}
-        >
-          <planeGeometry args={[30, 30]} />
-          <meshStandardMaterial color="#ffffff" transparent opacity={0.2} />
-        </mesh>
-      </group>
-
-      <group scale={0.03} position={[0, -1.49, -2]} castShadow>
-        <Computer />
-      </group>
+        <group scale={0.03} position={[0, -1.49, -2]} castShadow>
+          <Computer onLoaded={() => setLoading(false)} />
+        </group>
+      </Suspense>
+      {loading && (
+        <Html center>
+          <div className="w-12 h-12 border-4 border-t-white border-b-white border-l-transparent border-r-transparent rounded-full animate-spin" />
+        </Html>
+      )}
       <Particles count={100} />
     </Canvas>
   );

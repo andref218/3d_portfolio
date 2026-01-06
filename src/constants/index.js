@@ -1,10 +1,10 @@
 import { FaCode, FaGraduationCap, FaVideo } from "react-icons/fa";
 
 export const navLinks = [
-  //{
-  // name: "About",
-  //link: "#about",
-  //},
+  {
+    name: "About",
+    link: "#about",
+  },
   {
     name: "Work",
     link: "#work",
@@ -66,7 +66,7 @@ export const expCards = [
     company: "Freelancer",
     date: "2023 - Present",
     responsibilities: [
-      "Video Editing and Post-production for local clients.",
+      "Video Editing and Post-production for Local Clients.",
       "Using tools such as Adobe Premiere and Photoshop for editing and image processing.",
     ],
   },
