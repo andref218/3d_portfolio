@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { getAsset } from "../utils/paths";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -57,7 +58,10 @@ const Showcase = () => {
                 rel="noopener noreferrer"
                 className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
               >
-                <img src="/images/movieStreamApp1.png" alt="CineFlow"></img>
+                <img
+                  src={getAsset("/images/movieStreamApp1.png")}
+                  alt="CineFlow"
+                ></img>
               </a>
             </div>
             <div className="text-content">
@@ -88,7 +92,7 @@ const Showcase = () => {
                   className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
                 >
                   <img
-                    src="/images/aiImageGenerator1.png"
+                    src={getAsset("/images/aiImageGenerator1.png")}
                     alt="AI Image Generator"
                   />
                 </a>
@@ -113,7 +117,10 @@ const Showcase = () => {
                   rel="noopener noreferrer"
                   className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
                 >
-                  <img src="/images/nasaApp1.png" alt="APOD Project" />
+                  <img
+                    src={getAsset("/images/nasaApp1.png")}
+                    alt="APOD Project"
+                  />
                 </a>
               </div>
               <h2>

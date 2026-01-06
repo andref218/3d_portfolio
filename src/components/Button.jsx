@@ -1,4 +1,5 @@
 import React from "react";
+import { getAsset } from "../utils/paths";
 
 const Button = ({ text, className, id }) => {
   return (
@@ -24,7 +25,7 @@ const Button = ({ text, className, id }) => {
         <div className="bg-circle" />
         <p className="text">{text}</p>
         <div className="arrow-wrapper">
-          <img src="/images/arrow-down.svg" alt="arrow"></img>
+          <img src={getAsset("/images/arrow-down.svg")} alt="arrow"></img>
         </div>
       </div>
     </a>

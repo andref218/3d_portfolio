@@ -1,4 +1,5 @@
 import { FaCode, FaGraduationCap, FaVideo } from "react-icons/fa";
+import { getAsset } from "../utils/paths";
 
 export const navLinks = [
   {
@@ -20,14 +21,14 @@ export const navLinks = [
 ];
 
 export const words = [
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
+  { text: "Ideas", imgPath: getAsset("/images/ideas.svg") },
+  { text: "Concepts", imgPath: getAsset("/images/concepts.svg") },
+  { text: "Designs", imgPath: getAsset("/images/designs.svg") },
+  { text: "Code", imgPath: getAsset("/images/code.svg") },
+  { text: "Ideas", imgPath: getAsset("/images/ideas.svg") },
+  { text: "Concepts", imgPath: getAsset("/images/concepts.svg") },
+  { text: "Designs", imgPath: getAsset("/images/designs.svg") },
+  { text: "Code", imgPath: getAsset("/images/code.svg") },
 ];
 
 export const counterItems = [
@@ -75,25 +76,25 @@ export const expCards = [
 export const techStackIcons = [
   {
     name: "React Developer",
-    modelPath: "/models/react_logo-transformed.glb",
+    modelPath: getAsset("/models/react_logo-transformed.glb"),
     scale: 1,
     rotation: [0, 0, 0],
   },
   {
     name: "Flutter Developer",
-    modelPath: "/models/flutter_logo.glb",
+    modelPath: getAsset("/models/flutter_logo.glb"),
     scale: 28,
     rotation: [0, 0, 0],
   },
   {
     name: "Interactive Developer",
-    modelPath: "/models/three.js-transformed.glb",
+    modelPath: getAsset("/models/three.js-transformed.glb"),
     scale: 0.05,
     rotation: [0, 0, 0],
   },
   {
     name: "Project Manager",
-    modelPath: "/models/git-svg-transformed.glb",
+    modelPath: getAsset("/models/git-svg-transformed.glb"),
     scale: 0.05,
     rotation: [0, -Math.PI / 4, 0],
   },
@@ -103,11 +104,11 @@ export const socialImgs = [
   {
     name: "Github",
     url: "https://github.com/andref218",
-    imgPath: "/images/github.png",
+    imgPath: getAsset("/images/github.png"),
   },
   {
     name: "linkedin",
     url: "https://www.linkedin.com/in/andre-fonseca218",
-    imgPath: "/images/linkedin.png",
+    imgPath: getAsset("/images/linkedin.png"),
   },
 ];

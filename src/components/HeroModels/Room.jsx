@@ -5,10 +5,11 @@ Command: npx gltfjsx@6.5.3 optimized-room.glb
 
 import React, { useEffect } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
+import { getAsset } from "../../utils/paths";
 
 export function Room({ onLoaded, ...props }) {
-  const matcapTexture = useTexture("/images/textures/mat1.png");
-  const { nodes, materials } = useGLTF("/models/optimized-room.glb");
+  const matcapTexture = useTexture(getAsset("/images/textures/mat1.png"));
+  const { nodes, materials } = useGLTF(getAsset("/models/optimized-room.glb"));
 
   useEffect(() => {
     if (onLoaded) onLoaded();
@@ -148,4 +149,4 @@ export function Room({ onLoaded, ...props }) {
   );
 }
 
-useGLTF.preload("/models/optimized-room.glb");
+useGLTF.preload(getAsset("/models/optimized-room.glb"));

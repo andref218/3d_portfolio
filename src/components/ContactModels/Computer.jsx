@@ -6,10 +6,11 @@ Files: computer-optimized.glb [486.38KB] > /Users/andrefonseca/ReactProjects_Git
 
 import React, { useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
+import { getAsset } from "../../utils/paths";
 
 export function Computer({ onLoaded, ...props }) {
   const { nodes, materials } = useGLTF(
-    "/models/computer-optimized-transformed.glb"
+    getAsset("/models/computer-optimized-transformed.glb")
   );
   useEffect(() => {
     if (onLoaded) onLoaded();
@@ -30,4 +31,4 @@ export function Computer({ onLoaded, ...props }) {
   );
 }
 
-useGLTF.preload("/models/computer-optimized-transformed.glb");
+useGLTF.preload(getAsset("/models/computer-optimized-transformed.glb"));
