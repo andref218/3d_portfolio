@@ -3,7 +3,12 @@
 This project is a **modern portfolio** built with **React JS**, showcasing my work with **interactive 3D elements** integrated into the UI.  
 It combines **traditional web navigation** with **3D models and animations** to make the portfolio visually engaging.
 
-![Porfolio Screen](./screenshots/3d_portfolio.png)
+## 🌐 Live Demo
+
+Check out my live portfolio:  
+[![Visit Portfolio](https://img.shields.io/badge/Live%20Portfolio-Visit%20Now-brightgreen)](https://andref218.github.io/3d_portfolio/)
+
+[![Portfolio Screenshot](./screenshots/3d_portfolio.png)](https://andref218.github.io/3d_portfolio/)
 
 ---
 
