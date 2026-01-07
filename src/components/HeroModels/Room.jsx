@@ -12,9 +12,8 @@ export function Room({ onLoaded, ...props }) {
   const { nodes, materials } = useGLTF(getAsset("/models/optimized-room.glb"));
 
   useEffect(() => {
-    if (onLoaded) onLoaded();
-  }, [nodes, materials, onLoaded]);
-
+    onLoaded?.();
+  }, []);
   return (
     <group {...props} dispose={null}>
       <mesh
