@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
@@ -6,9 +6,9 @@ import { Room } from "./Room";
 import * as THREE from "three";
 import Particles from "./Particles";
 import AutoRotateRoom from "./AutoRotateRoom";
+import { Html, useProgress } from "@react-three/drei";
 
 const HeroExperience = () => {
-  const [loading, setLoading] = useState(true);
   const isTablet = useMediaQuery({ query: "(max-width:1024px)" });
   const isMobile = useMediaQuery({ query: "(max-width:768px)" });
   const [showHint, setShowHint] = useState(true);
@@ -22,19 +22,27 @@ const HeroExperience = () => {
     }
   };
 
-  return (
-    <div className="relative w-full h-[80vh] md:h-dvh">
-      {loading && (
-        <div className="absolute inset-0 flex items-center justify-center z-50">
+  const Loader = () => {
+    return (
+      <Html center>
+        <div className="flex flex-col items-center justify-center">
           <div className="w-12 h-12 border-4 border-t-white border-b-white border-l-transparent border-r-transparent rounded-full animate-spin"></div>
         </div>
-      )}
+      </Html>
+    );
+  };
+
+  return (
+    <div className="relative w-full h-[80vh] md:h-dvh">
       <Canvas
         camera={{ position: [0, 0, 15], fov: 45 }}
         onPointerDown={handleInteraction}
         onWheel={handleInteraction}
       >
-        // scroll
+        <Suspense fallback={<Loader />}>
+          <AutoRotateRoom isMobile={isMobile} />
+          <Particles count={100} />
+        </Suspense>
         <spotLight
           position={[2, 5, 6]}
           angle={0.15}
@@ -64,11 +72,6 @@ const HeroExperience = () => {
         />
         <pointLight position={[0, 1, 0]} intensity={10} color="#7209b7" />
         <pointLight position={[1, 2, -2]} intensity={10} color="#0d00a4" />
-        <AutoRotateRoom
-          isMobile={isMobile}
-          onLoaded={() => setLoading(false)}
-        />
-        <Particles count={100} />
       </Canvas>
       {showHint && (
         <div
