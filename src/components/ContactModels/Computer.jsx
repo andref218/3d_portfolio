@@ -8,13 +8,11 @@ import React, { useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 import { getAsset } from "../../utils/paths";
 
-export function Computer({ onLoaded, ...props }) {
+export function Computer({ ...props }) {
   const { nodes, materials } = useGLTF(
-    getAsset("/models/computer-optimized-transformed.glb")
+    getAsset("/models/computer-optimized-transformed.glb"),
   );
-  useEffect(() => {
-    if (onLoaded) onLoaded();
-  }, [nodes, materials, onLoaded]);
+
   return (
     <group {...props} dispose={null}>
       <group position={[-4.005, 67.549, 58.539]}>

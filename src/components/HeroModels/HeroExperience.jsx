@@ -7,12 +7,15 @@ import * as THREE from "three";
 import Particles from "./Particles";
 import AutoRotateRoom from "./AutoRotateRoom";
 import { Html, useProgress } from "@react-three/drei";
+import MobileInteractionHintHero from "./MobileInteractionHintHero";
 
 const HeroExperience = () => {
   const isTablet = useMediaQuery({ query: "(max-width:1024px)" });
   const isMobile = useMediaQuery({ query: "(max-width:768px)" });
   const [showHint, setShowHint] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
+
+  const showMobileHint = (isMobile || isTablet) && showHint;
 
   const handleInteraction = () => {
     if (!fadeOut) {
@@ -42,6 +45,8 @@ const HeroExperience = () => {
         <Suspense fallback={<Loader />}>
           <AutoRotateRoom isMobile={isMobile} />
           <Particles count={100} />
+
+          {showMobileHint && <MobileInteractionHintHero fadeOut={fadeOut} />}
         </Suspense>
         <spotLight
           position={[2, 5, 6]}
@@ -75,15 +80,22 @@ const HeroExperience = () => {
       </Canvas>
       {showHint && (
         <div
-          className={`absolute bottom-14 left-1/2 -translate-x-1/2
-      text-white-50 text-sm pointer-events-none
-      px-4 py-2 rounded-full bg-black/40 backdrop-blur-sm
-      transition-opacity duration-500 ease-out
-      ${fadeOut ? "opacity-0" : "opacity-100"}`}
+          className={`
+      hidden md:block
+      absolute bottom-14 left-1/2 -translate-x-1/2
+      px-4 py-2 rounded-full
+      bg-black/40 backdrop-blur-sm
+      text-white/80 text-sm
+      pointer-events-none
+      transition-opacity duration-500
+      ${fadeOut ? "opacity-0" : "opacity-100"}
+    `}
         >
-          <span className="subtleBlink">Drag or Scroll to interact</span>
+          Drag or Scroll to interact
         </div>
       )}
+      <div className="absolute top-0 left-0 h-full w-16 z-50 pointer-events-auto"></div>
+      <div className="absolute top-0 right-0 h-full w-16 z-50 pointer-events-auto"></div>
     </div>
   );
 };

@@ -7,13 +7,10 @@ import React, { useEffect } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 import { getAsset } from "../../utils/paths";
 
-export function Room({ onLoaded, ...props }) {
+export function Room({ ...props }) {
   const matcapTexture = useTexture(getAsset("/images/textures/mat1.png"));
   const { nodes, materials } = useGLTF(getAsset("/models/optimized-room.glb"));
 
-  useEffect(() => {
-    onLoaded?.();
-  }, []);
   return (
     <group {...props} dispose={null}>
       <mesh
