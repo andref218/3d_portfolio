@@ -94,8 +94,8 @@ const HeroExperience = () => {
           Drag or Scroll to interact
         </div>
       )}
-      <div className="absolute top-0 left-0 h-full w-16 z-50 pointer-events-auto"></div>
-      <div className="absolute top-0 right-0 h-full w-16 z-50 pointer-events-auto"></div>
+      <div className="absolute top-0 left-0 h-full w-33 z-50 pointer-events-auto"></div>
+      <div className="absolute top-0 right-0 h-full w-33 z-50 pointer-events-auto"></div>
     </div>
   );
 };

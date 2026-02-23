@@ -33,8 +33,6 @@ const ContactExperience = () => {
     );
   };
 
-  const minAzimuth = -1.5;
-  const maxAzimuth = 0.6;
   return (
     <Canvas
       shadows

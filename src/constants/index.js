@@ -33,7 +33,7 @@ export const words = [
 
 export const counterItems = [
   { value: 500, suffix: "+", label: "Hours of Coding" },
-  { value: 50, suffix: "+", label: "Commits pushed" },
+  { value: 150, suffix: "+", label: "Commits pushed" },
   { value: 99, suffix: "+", label: "Bugs Fixed" },
   { value: 24, suffix: "/7", label: "Learning Mode" },
 ];
@@ -81,11 +81,18 @@ export const techStackIcons = [
     rotation: [0, 0, 0],
   },
   {
+    name: "Node.js & Express Developer",
+    modelPath: getAsset("/models/nodejs_logo.glb"),
+    scale: 1.4,
+    rotation: [0, 0, 0],
+  },
+  {
     name: "Flutter Developer",
     modelPath: getAsset("/models/flutter_logo.glb"),
     scale: 28,
     rotation: [0, 0, 0],
   },
+
   {
     name: "Interactive Developer",
     modelPath: getAsset("/models/three.js-transformed.glb"),

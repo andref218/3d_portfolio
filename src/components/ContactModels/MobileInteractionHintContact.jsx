@@ -1,12 +1,10 @@
 import { Html } from "@react-three/drei";
 import Lottie from "lottie-react";
-import gestureHand from "../../assets/gesture_hand_mobile.json";
+//import gestureHand from "../../assets/gesture_hand_mobile.json";
 import dragMouse from "../../assets/hand_drag_desktop.json";
 
-const MobileInteractionHintContact = ({ fadeOut, isMobile }) => {
-  const positionY = 0;
-
-  const animationData = isMobile ? gestureHand : dragMouse;
+const MobileInteractionHintContact = ({ fadeOut }) => {
+  const animationData = dragMouse;
 
   return (
     <Html fullscreen>
@@ -20,7 +18,7 @@ const MobileInteractionHintContact = ({ fadeOut, isMobile }) => {
           animationData={animationData}
           loop
           autoplay
-          className="w-28 h-28"
+          className="w-20 h-20"
         />
       </div>
     </Html>

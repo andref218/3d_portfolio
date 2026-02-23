@@ -32,13 +32,13 @@ const Showcase = () => {
             trigger: card,
             start: "top bottom-=100",
           },
-        }
+        },
       );
     });
     gsap.fromTo(
       sectionRef.current,
       { opacity: 0 },
-      { opacity: 1, duration: 1.5 }
+      { opacity: 1, duration: 1.5 },
     );
   }, []);
 
@@ -67,7 +67,7 @@ const Showcase = () => {
             <div className="text-content">
               <h2>
                 <a
-                  href="https://github.com/andref218/movieStreamApp"
+                  href="https://cineflow-movie-stream-app.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
@@ -76,14 +76,45 @@ const Showcase = () => {
                 </a>
               </h2>
               <p className="text-white-50 md:text-xl">
-                An app built with React & TailwindCSS for a fast, user-friendly
-                experience.
+                An app that allows users to explore movies and watch trailers,
+                built with React and TailwindCSS.
               </p>
             </div>
           </div>
           {/* RIGHT SIDE*/}
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={project2Ref}>
+              <div>
+                <a
+                  href="https://github.com/andref218/mern_user_management"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
+                >
+                  <img
+                    src={getAsset("/images/mernUserManagementApp1.png")}
+                    alt="MERN User Management"
+                  />
+                </a>
+              </div>
+
+              <h2>
+                <a
+                  href="https://mern-user-management-eta.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
+                >
+                  User Management System
+                </a>
+              </h2>
+              <p className="text-white-50 md:text-xl mt-2">
+                A MERN full-stack application for managing users with create,
+                read, update, and delete functionality with a clean and
+                responsive interface.
+              </p>
+            </div>
+            <div className="project" ref={project3Ref}>
               <div>
                 <a
                   href="https://github.com/andref218/ai_image_generator"
@@ -93,11 +124,10 @@ const Showcase = () => {
                 >
                   <img
                     src={getAsset("/images/aiImageGenerator1.png")}
-                    alt="AI Image Generator"
+                    alt="AI Image Generator Project"
                   />
                 </a>
               </div>
-
               <h2>
                 <a
                   href="https://github.com/andref218/ai_image_generator"
@@ -108,31 +138,10 @@ const Showcase = () => {
                   AI Image Generator
                 </a>
               </h2>
-            </div>
-            <div className="project" ref={project3Ref}>
-              <div>
-                <a
-                  href="https://github.com/andref218/nasaApp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
-                >
-                  <img
-                    src={getAsset("/images/nasaApp1.png")}
-                    alt="APOD Project"
-                  />
-                </a>
-              </div>
-              <h2>
-                <a
-                  href="https://github.com/andref218/nasaApp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
-                >
-                  APOD Project
-                </a>
-              </h2>
+              <p className="text-white-50 md:text-xl  mt-2">
+                An AI-powered app that generates images from text prompts with a
+                clean and intuitive interface.
+              </p>
             </div>
           </div>
         </div>
