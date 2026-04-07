@@ -37,7 +37,7 @@ const About = () => {
         <div className="max-w-4xl mt-10 flex flex-col gap-6 text-center ">
           <p className="about-text text-lg text-white-50 leading-relaxed">
             Hi, I’m <span className="text-white font-semibold">André</span>, a
-            Frontend Developer with a strong interest in building interactive,
+            Software Developer with a strong interest in building interactive,
             user-friendly, and visually engaging web applications.
           </p>
 

@@ -33,7 +33,7 @@ export const words = [
 
 export const counterItems = [
   { value: 500, suffix: "+", label: "Hours of Coding" },
-  { value: 150, suffix: "+", label: "Commits pushed" },
+  { value: 300, suffix: "+", label: "Commits pushed" },
   { value: 99, suffix: "+", label: "Bugs Fixed" },
   { value: 24, suffix: "/7", label: "Learning Mode" },
 ];
@@ -52,7 +52,7 @@ export const expCards = [
   },
   {
     logoPath: FaCode,
-    title: "Software Developer (FrontEnd)",
+    title: "Software Developer (Frontend)",
     company: "Nonius",
     situation: "Curricular Internship",
     date: "2021 - 2022",
@@ -75,6 +75,12 @@ export const expCards = [
 
 export const techStackIcons = [
   {
+    name: "Next.js Developer",
+    modelPath: getAsset("/models/next_js_logo.glb"),
+    scale: 0.24,
+    rotation: [0, 1.7, 0],
+  },
+  {
     name: "React Developer",
     modelPath: getAsset("/models/react_logo-transformed.glb"),
     scale: 1,
@@ -84,12 +90,6 @@ export const techStackIcons = [
     name: "Node.js & Express Developer",
     modelPath: getAsset("/models/nodejs_logo.glb"),
     scale: 1.4,
-    rotation: [0, 0, 0],
-  },
-  {
-    name: "Flutter Developer",
-    modelPath: getAsset("/models/flutter_logo.glb"),
-    scale: 28,
     rotation: [0, 0, 0],
   },
 

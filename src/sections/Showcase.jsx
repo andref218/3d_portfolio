@@ -46,38 +46,38 @@ const Showcase = () => {
     <section id="work" ref={sectionRef} className="app-showcase scroll-mt-5">
       <div className="w-full xl:mb-10">
         <h2 className="text-center mb-20 text-2xl md:text-3xl lg:text-4xl text-white-50">
-          Some of my Projects:
+          Some of my Work:
         </h2>
         <div className="showcaselayout">
           {/* LEFT SIDE*/}
           <div className="first-project-wrapper" ref={project1Ref}>
-            <div className="">
+            <div>
               <a
-                href="https://github.com/andref218/movieStreamApp"
+                href="https://github.com/andref218/job_application_tracker"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
               >
                 <img
-                  src={getAsset("/images/movieStreamApp1.png")}
-                  alt="CineFlow"
+                  src={getAsset("/images/jobApplicationTrackerHomePage.png")}
+                  alt="Job Application Tracker"
                 ></img>
               </a>
             </div>
             <div className="text-content">
               <h2>
                 <a
-                  href="https://cineflow-movie-stream-app.vercel.app/"
+                  href="https://job-application-tracker-azure-sigma.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
                 >
-                  CineFlow - A Powerful, User-Friendly Streaming Platform
+                  YourJobs - Organize and Track Your Job Applications
                 </a>
               </h2>
               <p className="text-white-50 md:text-xl">
-                An app that allows users to explore movies and watch trailers,
-                built with React and TailwindCSS.
+                A full-stack app to track job applications, manage companies and
+                positions, built with Next.js, React.js, and Tailwind CSS.
               </p>
             </div>
           </div>
