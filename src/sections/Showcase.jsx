@@ -53,31 +53,33 @@ const Showcase = () => {
           <div className="first-project-wrapper" ref={project1Ref}>
             <div>
               <a
-                href="https://github.com/andref218/job_application_tracker"
+                href="https://www.vynilz.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
               >
                 <img
-                  src={getAsset("/images/jobApplicationTrackerHomePage.png")}
-                  alt="Job Application Tracker"
+                  src={getAsset("/images/vynilz_collection.png")}
+                  alt="Vynilz"
                 ></img>
               </a>
             </div>
             <div className="text-content">
               <h2>
                 <a
-                  href="https://job-application-tracker-azure-sigma.vercel.app/"
+                  href="https://github.com/andref218/vynilz-showcase"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
                 >
-                  YourJobs - Organize and Track Your Job Applications
+                  Vynilz - Build your collection, unlock achievements, and
+                  showcase your records.
                 </a>
               </h2>
               <p className="text-white-50 md:text-xl">
-                A full-stack app to track job applications, manage companies and
-                positions, built with Next.js, React.js, and Tailwind CSS.
+                A full-stack web application that helps vinyl collectors build,
+                organize, and showcase their collections online, featuring
+                public profiles, achievements and much more.
               </p>
             </div>
           </div>
@@ -86,7 +88,37 @@ const Showcase = () => {
             <div className="project" ref={project2Ref}>
               <div>
                 <a
-                  href="https://github.com/andref218/mern_user_management"
+                  href="https://job-application-tracker-azure-sigma.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
+                >
+                  <img
+                    src={getAsset("/images/jobApplicationTrackerHomePage.png")}
+                    alt="MERN User Management"
+                  />
+                </a>
+              </div>
+
+              <h2>
+                <a
+                  href="https://github.com/andref218/job_application_tracker"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
+                >
+                  YourJobs - Organize and Track Your Job Applications
+                </a>
+              </h2>
+              <p className="text-white-50 md:text-xl mt-2">
+                A full-stack app to track job applications, manage companies and
+                positions, built with Next.js, React.js, and Tailwind CSS.
+              </p>
+            </div>
+            <div className="project" ref={project3Ref}>
+              <div>
+                <a
+                  href="https://mern-user-management-eta.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
@@ -97,10 +129,9 @@ const Showcase = () => {
                   />
                 </a>
               </div>
-
               <h2>
                 <a
-                  href="https://mern-user-management-eta.vercel.app/"
+                  href="https://github.com/andref218/mern_user_management"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
@@ -108,39 +139,10 @@ const Showcase = () => {
                   User Management System
                 </a>
               </h2>
-              <p className="text-white-50 md:text-xl mt-2">
+              <p className="text-white-50 md:text-xl  mt-2">
                 A MERN full-stack application for managing users with create,
                 read, update, and delete functionality with a clean and
                 responsive interface.
-              </p>
-            </div>
-            <div className="project" ref={project3Ref}>
-              <div>
-                <a
-                  href="https://github.com/andref218/ai_image_generator"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
-                >
-                  <img
-                    src={getAsset("/images/aiImageGenerator1.png")}
-                    alt="AI Image Generator Project"
-                  />
-                </a>
-              </div>
-              <h2>
-                <a
-                  href="https://github.com/andref218/ai_image_generator"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
-                >
-                  AI Image Generator
-                </a>
-              </h2>
-              <p className="text-white-50 md:text-xl  mt-2">
-                An AI-powered app that generates images from text prompts with a
-                clean and intuitive interface.
               </p>
             </div>
           </div>

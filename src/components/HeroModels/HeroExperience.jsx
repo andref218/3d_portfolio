@@ -1,6 +1,5 @@
 import { useState, useEffect, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 import { Room } from "./Room";
 import * as THREE from "three";
@@ -10,12 +9,12 @@ import { Html, useProgress } from "@react-three/drei";
 import MobileInteractionHintHero from "./MobileInteractionHintHero";
 
 const HeroExperience = () => {
-  const isTablet = useMediaQuery({ query: "(max-width:1024px)" });
   const isMobile = useMediaQuery({ query: "(max-width:768px)" });
+  const isTablet = useMediaQuery({
+    query: "(min-width:769px) and (max-width:1024px)",
+  });
   const [showHint, setShowHint] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
-
-  const showMobileHint = (isMobile || isTablet) && showHint;
 
   const handleInteraction = () => {
     if (!fadeOut) {
@@ -46,7 +45,9 @@ const HeroExperience = () => {
           <AutoRotateRoom isMobile={isMobile} />
           <Particles count={100} />
 
-          {showMobileHint && <MobileInteractionHintHero fadeOut={fadeOut} />}
+          {showHint && (
+            <MobileInteractionHintHero fadeOut={fadeOut} isMobile={isMobile} />
+          )}
         </Suspense>
         <spotLight
           position={[2, 5, 6]}
@@ -78,22 +79,7 @@ const HeroExperience = () => {
         <pointLight position={[0, 1, 0]} intensity={10} color="#7209b7" />
         <pointLight position={[1, 2, -2]} intensity={10} color="#0d00a4" />
       </Canvas>
-      {showHint && (
-        <div
-          className={`
-      hidden md:block
-      absolute bottom-14 left-1/2 -translate-x-1/2
-      px-4 py-2 rounded-full
-      bg-black/40 backdrop-blur-sm
-      text-white/80 text-sm
-      pointer-events-none
-      transition-opacity duration-500
-      ${fadeOut ? "opacity-0" : "opacity-100"}
-    `}
-        >
-          Drag or Scroll to interact
-        </div>
-      )}
+
       <div className="absolute top-0 left-0 h-full w-33 z-50 pointer-events-auto"></div>
       <div className="absolute top-0 right-0 h-full w-33 z-50 pointer-events-auto"></div>
     </div>

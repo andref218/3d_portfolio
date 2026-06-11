@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import { useFrame } from "@react-three/fiber";
 import { Room } from "./Room";
 import { OrbitControls } from "@react-three/drei";
 
@@ -24,7 +23,7 @@ const AutoRotateRoom = ({ isMobile }) => {
         autoRotateSpeed={0.5}
         ref={controlsRef}
         enablePan={false} // disable panning
-        enableZoom={true} // allow zoom
+        enableZoom={false} // allow zoom
         minDistance={5} // zoom min
         maxDistance={15} // zoom max
         minPolarAngle={Math.PI / 5} // limit vertical rotation

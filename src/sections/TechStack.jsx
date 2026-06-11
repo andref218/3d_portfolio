@@ -22,7 +22,7 @@ const TechStack = () => {
           trigger: "#skills",
           start: "top center",
         },
-      }
+      },
     );
   });
 
@@ -37,11 +37,14 @@ const TechStack = () => {
           title="My Preferred Tech Stack"
         />
         <div className="tech-grid">
-          {techStackIcons.map((icon) => {
+          {techStackIcons.map((icon, index) => {
             return (
               <div
                 key={icon.name}
-                className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
+                className={`card-border tech-card overflow-hidden group
+                xl:rounded-full rounded-lg
+                ${index === techStackIcons.length - 1 ? "md:col-span-2 xl:col-span-1" : ""}
+              `}
               >
                 <div className="tech-card-animated-bg" />
                 <div className="tech-card-content">
