@@ -32,7 +32,7 @@ export const words = [
 ];
 
 export const counterItems = [
-  { value: 500, suffix: "+", label: "Hours of Coding" },
+  { value: 600, suffix: "+", label: "Hours of Coding" },
   { value: 400, suffix: "+", label: "Commits pushed" },
   { value: 99, suffix: "+", label: "Bugs Fixed" },
   { value: 24, suffix: "/7", label: "Learning Mode" },

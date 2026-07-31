@@ -3,6 +3,8 @@ import TitleHeader from "../components/TitleHeader";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FaGithub } from "react-icons/fa";
+import { getAsset } from "../utils/paths";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,6 +57,49 @@ const About = () => {
             looking for ways to improve both my technical skills and the overall
             quality of my work.
           </p>
+
+          <p className="about-text mt-4 text-white-50 text-center text-lg font-bold">
+            All of my projects are available at:
+          </p>
+
+          <div className="about-text mt-2 flex justify-center z-50">
+            <div className="group relative inline-block">
+              <a
+                href="https://github.com/andref218"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-blue-400 text-lg hover:text-blue-300 underline underline-offset-4 transition-colors"
+              >
+                <FaGithub size={22} />
+                github.com/andref218
+              </a>
+
+              <div
+                className="pointer-events-none absolute left-1/2 top-full z-[9999] mt-5 -translate-x-1/2 translate-y-2 opacity-0
+                scale-95 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100"
+              >
+                <div className="w-[700px] overflow-hidden rounded-2xl border border-white/10 bg-[#111111] shadow-2xl">
+                  {/* Browser Header */}
+                  <div className="flex items-center gap-2 border-b border-white/10 bg-[#1a1a1a] px-4 py-3">
+                    <div className="h-3 w-3 rounded-full bg-red-500" />
+                    <div className="h-3 w-3 rounded-full bg-yellow-500" />
+                    <div className="h-3 w-3 rounded-full bg-green-500" />
+
+                    <div className="ml-4 flex-1 rounded-full bg-black/30 px-4 py-1 text-center text-xs text-gray-400">
+                      github.com/andref218
+                    </div>
+                  </div>
+
+                  {/* Github Profile Preview */}
+                  <img
+                    src={getAsset("/images/github_profile_preview.png")}
+                    alt="GitHub Preview"
+                    className="w-full"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -11,12 +11,14 @@ const Showcase = () => {
   const project1Ref = useRef(null);
   const project2Ref = useRef(null);
   const project3Ref = useRef(null);
+  const project4Ref = useRef(null);
 
   useGSAP(() => {
     const projects = [
       project1Ref.current,
       project2Ref.current,
       project3Ref.current,
+      project4Ref.current,
     ];
 
     projects.forEach((card, index) => {
@@ -49,14 +51,14 @@ const Showcase = () => {
           Some of my Work:
         </h2>
         <div className="showcaselayout">
-          {/* LEFT SIDE*/}
-          <div className="first-project-wrapper" ref={project1Ref}>
-            <div>
+          {/* PROJECT 1 - Vynilz*/}
+          <div className="project-card" ref={project1Ref}>
+            <div className="project-image">
               <a
                 href="https://www.vynilz.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
+                className="text-white font-semibold hover:opacity-70 transition-opacity duration-300"
               >
                 <img
                   src={getAsset("/images/vynilz_collection.png")}
@@ -70,10 +72,9 @@ const Showcase = () => {
                   href="https://github.com/andref218/vynilz-showcase"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
+                  className="text-white font-semibold hover:opacity-70 transition-opacity duration-300"
                 >
-                  Vynilz - Build your collection, unlock achievements, and
-                  showcase your records.
+                  Vynilz – Build, Track & Showcase Your Vinyl Collection.
                 </a>
               </h2>
               <p className="text-white-50 md:text-xl">
@@ -83,71 +84,103 @@ const Showcase = () => {
               </p>
             </div>
           </div>
-          {/* RIGHT SIDE*/}
-          <div className="project-list-wrapper overflow-hidden">
-            <div className="project" ref={project2Ref}>
-              <div>
-                <a
-                  href="https://github.com/andref218/rag_studio"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
-                >
-                  <img
-                    src={getAsset("/images/rag_studio_home_page.png")}
-                    alt="MERN User Management"
-                  />
-                </a>
-              </div>
 
+          {/* PROJECT 2 - RAG Studio */}
+          <div className="project-card" ref={project2Ref}>
+            <div className="project-image">
+              <a
+                href="https://github.com/andref218/rag_studio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white font-semibold hover:opacity-70 transition-opacity duration-300"
+              >
+                <img
+                  src={getAsset("/images/rag_studio_home_page.png")}
+                  alt="MERN User Management"
+                />
+              </a>
+            </div>
+
+            <h2>
+              <a
+                href="https://github.com/andref218/rag_studio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white font-semibold hover:opacity-70 transition-opacity duration-300"
+              >
+                RAG Studio - AI assistant powered by your own documents.
+              </a>
+            </h2>
+            <p className="text-white-50 md:text-xl mt-2">
+              A Retrieval-Augmented Generation (RAG) application that retrieves
+              relevant information from custom documents to generate accurate,
+              context-aware responses using a local LLM.
+            </p>
+          </div>
+          {/* PROJECT 3 - Job Application Tracker*/}
+          <div className="project-card" ref={project3Ref}>
+            <div className="project-image">
+              <a
+                href="https://job-application-tracker-azure-sigma.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
+              >
+                <img
+                  src={getAsset("/images/jobApplicationTrackerHomePage.png")}
+                  alt="Job Application Tracker"
+                ></img>
+              </a>
+            </div>
+            <div className="text-content">
               <h2>
                 <a
-                  href="https://github.com/andref218/rag_studio"
+                  href="https://github.com/andref218/job_application_tracker"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
                 >
-                  RAG Studio - AI assistant powered by your own documents.
+                  YourJobs - Organize and Track Your Job Applications
                 </a>
               </h2>
-              <p className="text-white-50 md:text-xl mt-2">
-                A Retrieval-Augmented Generation (RAG) application that
-                retrieves relevant information from custom documents to generate
-                accurate, context-aware responses using a local LLM.
+              <p className="text-white-50 md:text-xl">
+                A full-stack app to track job applications, manage companies and
+                positions, built with Next.js, React.js, and Tailwind CSS.
               </p>
             </div>
-            <div className="project" ref={project3Ref}>
-              <div>
-                <a
-                  href="https://github.com/andref218/llama3.2-customer-support-qlora"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
-                >
-                  <img
-                    src={getAsset(
-                      "/images/llama3_2_customer_support_qlora_hugging_face.png",
-                    )}
-                    alt="MERN User Management"
-                  />
-                </a>
-              </div>
-              <h2>
-                <a
-                  href="https://github.com/andref218/llama3.2-customer-support-qlora"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
-                >
-                  Llama 3.2 Customer Support Fine-Tuning
-                </a>
-              </h2>
-              <p className="text-white-50 md:text-xl  mt-2">
-                Fine-tuned the Meta Llama 3.2 Instruct model for customer
-                support using QLoRA and PEFT, publishing the trained LoRA
-                adapter on the Hugging Face Hub.
-              </p>
+          </div>
+          {/* PROJECT 4 - Llama 3.2 Customer Support Fine-Tuning*/}
+          <div className="project-card" ref={project4Ref}>
+            <div className="project-image">
+              <a
+                href="https://huggingface.co/andref218/llama3.2-customer-support-qlora"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
+              >
+                <img
+                  src={getAsset(
+                    "/images/llama3_2_customer_support_qlora_hugging_face.png",
+                  )}
+                  alt="MERN User Management"
+                />
+              </a>
             </div>
+            <h2>
+              <a
+                href="https://github.com/andref218/llama3.2-customer-support-qlora"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
+              >
+                Llama 3.2 Customer Support Fine-Tuning
+              </a>
+            </h2>
+            <p className="text-white-50 md:text-xl  mt-2">
+              Fine-tuned the Meta Llama 3.2 Instruct model for customer support
+              using QLoRA and PEFT, publishing the trained LoRA adapter on the
+              Hugging Face Hub.
+            </p>
           </div>
         </div>
       </div>
