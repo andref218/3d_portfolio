@@ -11,19 +11,68 @@ const Contact = () => {
     message: "",
   });
 
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setformData({
-      ...formData,
+
+    setformData((prev) => ({
+      ...prev,
       [name]: value,
-    });
+    }));
+
+    setErrors((prev) => ({
+      ...prev,
+      [name]: "",
+    }));
+
+    setSuccess(false);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const newErrors = {};
+
+    const name = formData.name.trim();
+    const email = formData.email.trim();
+    const message = formData.message.trim();
+
+    if (!name) {
+      newErrors.name = "Name is required.";
+    } else if (name.length > 100) {
+      newErrors.name = "Name cannot exceed 100 characters.";
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!email) {
+      newErrors.email = "Email is required.";
+    } else if (!emailRegex.test(email)) {
+      newErrors.email = "Please enter a valid email address.";
+    }
+
+    if (!message) {
+      newErrors.message = "Message is required.";
+    } else if (message.length < 10) {
+      newErrors.message = "Message must be at least 10 characters.";
+    } else if (message.length > 1000) {
+      newErrors.message = "Message cannot exceed 1000 characters.";
+    }
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length > 0) {
+      return;
+    }
+
     setLoading(true);
     setSuccess(false);
     try {
@@ -31,9 +80,14 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_API_KEY
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_API_KEY,
       );
       setSuccess(true);
+      setErrors({
+        name: "",
+        email: "",
+        message: "",
+      });
     } catch (error) {
       console.log("EMAILJS ERROR", error);
     } finally {
@@ -70,6 +124,9 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                   />
+                  {errors.name && (
+                    <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                  )}
                 </div>
                 <div>
                   <label htmlFor="email">Email</label>
@@ -82,6 +139,9 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                   />
+                  {errors.email && (
+                    <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                  )}
                 </div>
                 <div>
                   <label htmlFor="message">Message</label>
@@ -94,6 +154,11 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                   />
+                  {errors.message && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.message}
+                    </p>
+                  )}
                 </div>
                 <button
                   type="submit"
