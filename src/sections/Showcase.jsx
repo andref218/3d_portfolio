@@ -82,6 +82,9 @@ const Showcase = () => {
                 organize, and showcase their collections online, featuring
                 public profiles, achievements and much more.
               </p>
+              <div className="mt-4 bg-blue-400 w-fit px-3 py-1 rounded-lg text-black font-semibold text-sm">
+                Next.js • MongoDB • Tailwind CSS • Discogs API • Google Auth
+              </div>
             </div>
           </div>
 
@@ -100,7 +103,6 @@ const Showcase = () => {
                 />
               </a>
             </div>
-
             <h2>
               <a
                 href="https://github.com/andref218/rag_studio"
@@ -116,6 +118,9 @@ const Showcase = () => {
               relevant information from custom documents to generate accurate,
               context-aware responses using a local LLM.
             </p>
+            <div className="mt-4 bg-blue-400 w-fit px-3 py-1 rounded-lg text-black font-semibold text-sm">
+              Python • LangChain • Ollama • ChromaDB • Gradio
+            </div>
           </div>
           {/* PROJECT 3 - Job Application Tracker*/}
           <div className="project-card" ref={project3Ref}>
@@ -147,6 +152,9 @@ const Showcase = () => {
                 A full-stack app to track job applications, manage companies and
                 positions, built with Next.js, React.js, and Tailwind CSS.
               </p>
+            </div>
+            <div className="mt-4 bg-blue-400 w-fit px-3 py-1 rounded-lg text-black font-semibold text-sm">
+              Next.js • MongoDB • TypeScript • Tailwind CSS • BetterAuth
             </div>
           </div>
           {/* PROJECT 4 - Llama 3.2 Customer Support Fine-Tuning*/}
@@ -181,6 +189,9 @@ const Showcase = () => {
               using QLoRA and PEFT, publishing the trained LoRA adapter on the
               Hugging Face Hub.
             </p>
+            <div className="mt-4 bg-blue-400 w-fit px-3 py-1 rounded-lg text-black font-semibold text-sm">
+              Python • Transformers • TRL • PEFT • QLoRA
+            </div>
           </div>
         </div>
       </div>
