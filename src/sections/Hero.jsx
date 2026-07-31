@@ -11,7 +11,7 @@ const Hero = () => {
     gsap.fromTo(
       ".hero-text h1",
       { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
+      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" },
     );
   });
   return (
@@ -50,8 +50,8 @@ const Hero = () => {
               <h1>that Deliver Results</h1>
             </div>
             <p className="text-white-50 md:text-xl max-w-xl md:max-w-2xl relative z-10 ">
-              My name is André, I'm a Software Developer focused on building
-              interactive and user-friendly web applications.
+              Hey! My name is André, I'm a Software Developer passionate about
+              AI Engineering, LLMs, and Full-Stack Development.
             </p>
 
             <Button

@@ -88,13 +88,13 @@ const Showcase = () => {
             <div className="project" ref={project2Ref}>
               <div>
                 <a
-                  href="https://job-application-tracker-azure-sigma.vercel.app/"
+                  href="https://github.com/andref218/rag_studio"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
                 >
                   <img
-                    src={getAsset("/images/jobApplicationTrackerHomePage.png")}
+                    src={getAsset("/images/rag_studio_home_page.png")}
                     alt="MERN User Management"
                   />
                 </a>
@@ -102,47 +102,51 @@ const Showcase = () => {
 
               <h2>
                 <a
-                  href="https://github.com/andref218/job_application_tracker"
+                  href="https://github.com/andref218/rag_studio"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
                 >
-                  YourJobs - Organize and Track Your Job Applications
+                  RAG Studio - Build AI assistants powered by your own
+                  documents.
                 </a>
               </h2>
               <p className="text-white-50 md:text-xl mt-2">
-                A full-stack app to track job applications, manage companies and
-                positions, built with Next.js, React.js, and Tailwind CSS.
+                A Retrieval-Augmented Generation (RAG) application that
+                retrieves relevant information from custom documents to generate
+                accurate, context-aware responses using LLMs.
               </p>
             </div>
             <div className="project" ref={project3Ref}>
               <div>
                 <a
-                  href="https://mern-user-management-eta.vercel.app/"
+                  href="https://github.com/andref218/llama3.2-customer-support-qlora"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
                 >
                   <img
-                    src={getAsset("/images/mernUserManagementApp1.png")}
+                    src={getAsset(
+                      "/images/llama3_2_customer_support_qlora_hugging_face.png",
+                    )}
                     alt="MERN User Management"
                   />
                 </a>
               </div>
               <h2>
                 <a
-                  href="https://github.com/andref218/mern_user_management"
+                  href="https://github.com/andref218/llama3.2-customer-support-qlora"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
                 >
-                  User Management System
+                  Llama 3.2 Customer Support Fine-Tuning
                 </a>
               </h2>
               <p className="text-white-50 md:text-xl  mt-2">
-                A MERN full-stack application for managing users with create,
-                read, update, and delete functionality with a clean and
-                responsive interface.
+                Fine-tuned the Meta Llama 3.2 Instruct model for customer
+                support using QLoRA and PEFT, publishing the trained LoRA
+                adapter on the Hugging Face Hub.
               </p>
             </div>
           </div>

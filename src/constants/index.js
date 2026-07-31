@@ -33,7 +33,7 @@ export const words = [
 
 export const counterItems = [
   { value: 500, suffix: "+", label: "Hours of Coding" },
-  { value: 300, suffix: "+", label: "Commits pushed" },
+  { value: 400, suffix: "+", label: "Commits pushed" },
   { value: 99, suffix: "+", label: "Bugs Fixed" },
   { value: 24, suffix: "/7", label: "Learning Mode" },
 ];
@@ -59,6 +59,7 @@ export const expCards = [
     responsibilities: [
       "Development of a Mobile Application for the Hospitality Industry using Flutter.",
       "Delivered an intuitive and efficient user experience focused on real-world team workflows and productivity.",
+      "Collaborated with the development team using Git for version control and participated in the implementation of new features and bug fixes.",
     ],
   },
   {
@@ -69,41 +70,42 @@ export const expCards = [
     responsibilities: [
       "Video Editing and Post-production for Local Clients.",
       "Using tools such as Adobe Premiere and Photoshop for editing and image processing.",
+      "Manage the complete post-production workflow, including editing, color correction, audio enhancement, and final delivery.",
     ],
   },
 ];
 
 export const techStackIcons = [
   {
-    name: "Next.js Developer",
+    name: "Next.js",
     modelPath: getAsset("/models/next_js_logo.glb"),
     scale: 0.24,
     rotation: [0, 1.7, 0],
   },
   {
-    name: "React Developer",
+    name: "React",
     modelPath: getAsset("/models/react_logo-transformed.glb"),
     scale: 1,
     rotation: [0, 0, 0],
   },
   {
-    name: "Node.js & Express Developer",
-    modelPath: getAsset("/models/nodejs_logo.glb"),
-    scale: 1.4,
+    name: "Python",
+    modelPath: getAsset("/models/python_logo.glb"),
+    scale: 0.8,
     rotation: [0, 0, 0],
   },
 
+  //{
+  //name: "Hugging Face",
+  //modelPath: getAsset("/models/hugging_face_logo.glb"),
+  //scale: 0.24,
+  //rotation: [0, 0, 0],
+  //},
   {
-    name: "Interactive Developer",
-    modelPath: getAsset("/models/three.js-transformed.glb"),
-    scale: 0.05,
+    name: "Node.js",
+    modelPath: getAsset("/models/nodejs_logo.glb"),
+    scale: 1.4,
     rotation: [0, 0, 0],
-  },
-  {
-    name: "Project Manager",
-    modelPath: getAsset("/models/git-svg-transformed.glb"),
-    scale: 0.05,
-    rotation: [0, -Math.PI / 4, 0],
   },
 ];
 

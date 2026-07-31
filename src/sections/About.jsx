@@ -37,15 +37,17 @@ const About = () => {
         <div className="max-w-4xl mt-10 flex flex-col gap-6 text-center ">
           <p className="about-text text-lg text-white-50 leading-relaxed">
             Hi, I’m <span className="text-white font-semibold">André</span>, a
-            Full Stack Developer with a strong interest in building interactive,
-            user-friendly, and visually engaging web applications.
+            Full Stack and AI Developer with a strong interest in Artificial
+            Intelligence, Large Language Models (LLMs), and modern web
+            development.
           </p>
 
           <p className="about-text text-lg text-white-50 leading-relaxed">
-            I enjoy transforming ideas and designs into clean, responsive, and
-            intuitive interfaces. My main focus is on creating smooth user
-            experiences, paying close attention to details such as layout,
-            animations, performance, and accessibility.
+            I enjoy building intelligent applications that combine intuitive
+            user experiences with AI capabilities. My experience includes
+            developing full-stack web applications, fine-tuning language models
+            with QLoRA, and working with technologies such as
+            Retrieval-Augmented Generation (RAG), Next.js, React and Node.js.
           </p>
 
           <p className="about-text text-lg text-white-50 leading-relaxed">
