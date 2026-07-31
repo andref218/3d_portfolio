@@ -107,14 +107,13 @@ const Showcase = () => {
                   rel="noopener noreferrer"
                   className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
                 >
-                  RAG Studio - Build AI assistants powered by your own
-                  documents.
+                  RAG Studio - AI assistant powered by your own documents.
                 </a>
               </h2>
               <p className="text-white-50 md:text-xl mt-2">
                 A Retrieval-Augmented Generation (RAG) application that
                 retrieves relevant information from custom documents to generate
-                accurate, context-aware responses using LLMs.
+                accurate, context-aware responses using a local LLM.
               </p>
             </div>
             <div className="project" ref={project3Ref}>

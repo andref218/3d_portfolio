@@ -95,12 +95,12 @@ export const techStackIcons = [
     rotation: [0, 0, 0],
   },
 
-  //{
-  //name: "Hugging Face",
-  //modelPath: getAsset("/models/hugging_face_logo.glb"),
-  //scale: 0.24,
-  //rotation: [0, 0, 0],
-  //},
+  {
+    name: "Hugging Face",
+    modelPath: getAsset("/models/hugging_face_logo.glb"),
+    scale: 0.24,
+    rotation: [0, 0, 0],
+  },
   {
     name: "Node.js",
     modelPath: getAsset("/models/nodejs_logo.glb"),
