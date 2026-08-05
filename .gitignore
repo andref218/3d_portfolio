@@ -82,3 +82,6 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+
+# Chroma vector database
+portfolio-ai-api/data/vector_db/
