@@ -1,0 +1,93 @@
+# Llama 3.2 Customer Support Fine-Tuning
+
+## Overview
+
+This project demonstrates Parameter-Efficient Fine-Tuning (PEFT) by adapting Meta's Llama 3.2 3B Instruct model for customer support using QLoRA. Instead of updating the entire model, lightweight LoRA adapters were trained, making the fine-tuning process significantly more memory efficient while maintaining strong performance.
+
+---
+
+## Motivation
+
+After studying Large Language Models and Retrieval-Augmented Generation, André wanted to explore the next step in LLM Engineering: fine-tuning open-source language models.
+
+The goal was to understand the complete QLoRA workflow, from dataset preparation and model quantization to training, evaluation, and publishing the resulting LoRA adapter on the Hugging Face Hub.
+
+---
+
+## Tech Stack
+
+### AI Engineering
+
+- Python
+- Transformers
+- PEFT
+- TRL
+- BitsAndBytes
+- Hugging Face
+- Weights & Biases
+
+### Model
+
+- Meta Llama 3.2 3B Instruct
+
+### Fine-Tuning
+
+- QLoRA
+- LoRA
+- 4-bit NF4 Quantization
+
+---
+
+## Key Features
+
+- Parameter-Efficient Fine-Tuning using QLoRA
+- 4-bit model quantization
+- LoRA adapter training
+- Experiment tracking with Weights & Biases
+- Published adapter on Hugging Face
+- Fully documented training workflow
+
+---
+
+## Technical Challenges
+
+Some of the main challenges during development included:
+
+- Understanding how QLoRA combines quantization with LoRA adapters.
+- Preparing conversational datasets for instruction tuning.
+- Configuring efficient training pipelines while working within limited GPU resources.
+- Monitoring training performance and preventing overfitting.
+
+---
+
+## What I Learned
+
+This project provided André with practical experience in:
+
+- Parameter-Efficient Fine-Tuning (PEFT)
+- QLoRA
+- LoRA adapters
+- Model quantization
+- Hugging Face ecosystem
+- Experiment tracking with Weights & Biases
+- Publishing trained adapters to the Hugging Face Hub
+
+---
+
+## Why This Project Matters
+
+This project demonstrates André's understanding of one of the most widely adopted approaches for fine-tuning modern Large Language Models.
+
+It complements his work in Retrieval-Augmented Generation by showing experience with adapting foundation models for domain-specific tasks while working efficiently with limited computational resources.
+
+---
+
+## Learn More
+
+The complete source code, training notebook, and documentation are publicly available.
+
+Repository:
+https://github.com/andref218/llama3.2-customer-support-qlora
+
+Hugging Face Model:
+https://huggingface.co/andref218/llama3.2-customer-support-qlora
