@@ -12,7 +12,7 @@ Workflow:
 
 from src.llm.client import get_llm
 from src.rag.retriever import retrieve
-from src.rag.prompt import build_prompt
+from src.rag.prompt_builder import build_prompt
 
 def answer(question: str) -> str:
     """
