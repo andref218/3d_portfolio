@@ -13,8 +13,7 @@ from chunking import chunk_documents
 from embeddings import get_embedding_model
 from loader import load_documents
 
-
-VECTOR_DB_PATH = "data/vector_db"
+from src.config import VECTOR_DB_PATH
 
 
 def create_vector_store(chunks: list[Document]) -> Chroma:

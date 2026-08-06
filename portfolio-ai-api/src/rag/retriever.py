@@ -9,11 +9,9 @@ from langchain_chroma import Chroma
 from langchain_core.documents import Document
 from langchain_core.retrievers import BaseRetriever
 
-from embeddings import get_embedding_model
+from src.rag.embeddings import get_embedding_model
 
-VECTOR_DB_PATH = "data/vector_db"
-
-TOP_K = 4
+from src.config import TOP_K, VECTOR_DB_PATH
 
 
 def load_vector_store() -> Chroma:

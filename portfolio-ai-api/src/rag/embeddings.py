@@ -4,9 +4,7 @@ Embedding model configuration.
 
 from langchain_huggingface import HuggingFaceEmbeddings
 
-
-EMBEDDING_MODEL = "BAAI/bge-small-en-v1.5"
-
+from src.config import EMBEDDING_MODEL
 
 def get_embedding_model() -> HuggingFaceEmbeddings:
     """
