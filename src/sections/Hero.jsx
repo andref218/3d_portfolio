@@ -51,7 +51,7 @@ const Hero = () => {
             </div>
             <p className="text-white-50 md:text-xl max-w-xl md:max-w-2xl relative z-10 ">
               Hey! My name is André, I'm a Software Developer passionate about
-              AI Engineering, LLMs, and Full-Stack Development.
+              AI Engineering and Full-Stack Development.
             </p>
 
             <Button

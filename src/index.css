@@ -409,3 +409,92 @@ section {
     rgba(255, 255, 255, 0) 100%
   );
 }
+
+.chat-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.chat-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(63 63 70 / 0.6); /* zinc-700 */
+  border-radius: 9999px;
+}
+
+.chat-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(113 113 122); /* zinc-500 */
+}
+
+@keyframes aurora-slow {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(60px, -40px, 0) scale(1.15);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes aurora-medium {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-50px, 40px, 0) scale(1.2);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes aurora-fast {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-70px, -30px, 0) scale(1.1);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.animate-aurora-slow {
+  animation: aurora-slow 18s ease-in-out infinite;
+}
+
+.animate-aurora-medium {
+  animation: aurora-medium 14s ease-in-out infinite;
+}
+
+.animate-aurora-fast {
+  animation: aurora-fast 22s ease-in-out infinite;
+}
+
+.aurora-mask {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+}

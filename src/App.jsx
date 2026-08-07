@@ -10,6 +10,8 @@ import TechStack from "./sections/TechStack";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import About from "./sections/About";
+import Chat from "./components/Chat/Chat";
+import PortfolioAI from "./sections/PortfolioAssistantAI";
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
       <Showcase />
       <Journey />
       <TechStack />
+      <PortfolioAI />
       <Contact />
       <Footer />
     </>
