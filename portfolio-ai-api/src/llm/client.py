@@ -8,20 +8,27 @@ application remains unchanged if the model or provider changes
 (e.g. Ollama during development, OpenRouter in production).
 """
 
-from langchain_ollama import ChatOllama
+from langchain_openai import ChatOpenAI
 
-from src.config import MODEL_NAME, TEMPERATURE
+from src.config import (
+    MODEL_NAME,
+    TEMPERATURE,
+    OPENROUTER_API_KEY,
+    OPENROUTER_BASE_URL,
+)
 
 
-def get_llm() -> ChatOllama:
+def get_llm() -> ChatOpenAI:
     """
     Create the language model client.
 
     Returns:
-        Configured ChatOllama client.
+        Configured ChatOpenAI client.
     """
 
-    return ChatOllama(
+    return ChatOpenAI(
         model=MODEL_NAME,
         temperature=TEMPERATURE,
+        api_key=OPENROUTER_API_KEY,
+        base_url=OPENROUTER_BASE_URL,
     )
