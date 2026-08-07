@@ -4,7 +4,7 @@ Outside of software development, André enjoys activities that encourage creativ
 
 ## Basketball
 
-Basketball is one of André's biggest passions outside of software development. He enjoys playing the sport and also serves as an Assistant Basketball Coach at Clube José Régio, where he has developed leadership, teamwork, and communication skills.
+Basketball is one of André's biggest passions outside of software development. He enjoys playing the sport and following it closely, appreciating its competitive, strategic, and team-oriented nature.
 
 ## Video Games
 
