@@ -9,9 +9,9 @@ from pathlib import Path
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
 
-from chunking import chunk_documents
-from embeddings import get_embedding_model
-from loader import load_documents
+from src.rag.chunking import chunk_documents
+from src.rag.embeddings import get_embedding_model
+from src.rag.loader import load_documents
 
 from src.config import VECTOR_DB_PATH
 
