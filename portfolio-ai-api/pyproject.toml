@@ -15,5 +15,6 @@ dependencies = [
     "langchain-openai>=1.4.2",
     "python-dotenv>=1.2.2",
     "sentence-transformers>=5.6.1",
+    "slowapi>=0.1.10",
     "uvicorn>=0.52.1",
 ]

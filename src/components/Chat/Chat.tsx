@@ -41,7 +41,9 @@ export default function Chat() {
         id: crypto.randomUUID(),
         role: "assistant",
         content:
-          "Sorry, something went wrong while contacting the Portfolio AI.",
+          error instanceof Error
+            ? error.message
+            : "Sorry, something went wrong while contacting the Portfolio AI.",
       };
 
       setMessages((previous) => [...previous, assistantMessage]);

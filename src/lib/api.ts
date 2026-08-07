@@ -23,6 +23,12 @@ export async function askPortfolioAI(question: string): Promise<string> {
     }),
   });
 
+  if (response.status === 429) {
+    throw new Error(
+      "You've reached the limit of 20 questions per hour. Please try again later.",
+    );
+  }
+
   if (!response.ok) {
     throw new Error("Failed to get response from Portfolio AI.");
   }
