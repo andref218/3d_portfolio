@@ -2,35 +2,26 @@
 
 ## Bachelor's Degree in Computer Science
 
-### Institution
+André earned a Bachelor's Degree in Computer Science from **Universidade da Maia (UMAIA), Portugal**, where he studied between **2018 and 2022**.
 
-Universidade da Maia (UMAIA)
+His academic journey provided a strong foundation in software engineering, computer science principles, and modern software development practices. During the degree, André specialized in **Mobile Computing**, gaining practical experience in designing and developing mobile applications while strengthening his knowledge of software architecture, databases, networking, and programming.
 
-### Period
+### Academic Highlights
 
-2018 – 2022
-
-### Degree
-
-Bachelor's Degree in Computer Science
-
-### Specialization
-
-During his studies, André specialized in Mobile Computing, gaining experience in mobile application development, software engineering principles, databases, networking, and modern programming practices.
-
-### Academic Experience
-
-Throughout the degree, André developed a solid foundation in:
+During his studies at **Universidade da Maia (UMAIA)**, André developed practical and theoretical knowledge in several areas, including:
 
 - Software Engineering
 - Object-Oriented Programming
 - Algorithms and Data Structures
 - Databases
 - Mobile Application Development
-- Computer Networks
 - Web Development
 
-His final academic experience included a curricular internship at Nonius Hospitality Technology, where he contributed to the development of a Flutter mobile application for the hospitality industry.
+### Curricular Internship
+
+As part of his Bachelor's Degree in Computer Science at **Universidade da Maia (UMAIA)**, André completed a curricular internship at **Nonius Hospitality Technology**.
+
+During the internship, he contributed to the development of a Flutter mobile application for the hospitality industry, gaining hands-on experience in real-world software development, teamwork, and professional software engineering practices.
 
 ## Continuous Learning
 
