@@ -1,21 +1,28 @@
 """
 Embedding model configuration.
 """
+#Keeping it here temporarily for reference, but we are now using OpenRouter embeddings instead of HuggingFace embeddings.
+#from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_openai import OpenAIEmbeddings
 
-from langchain_huggingface import HuggingFaceEmbeddings
+from src.config import (
+    EMBEDDING_MODEL,
+    OPENROUTER_API_KEY,
+    OPENROUTER_BASE_URL,
+)
 
-from src.config import EMBEDDING_MODEL
-
-def get_embedding_model() -> HuggingFaceEmbeddings:
+def get_embedding_model() -> OpenAIEmbeddings:
     """
     Create and return the embedding model.
 
     Returns:
-        Configured HuggingFace embedding model.
+        Configured OpenAI embedding model.
     """
 
-    return HuggingFaceEmbeddings(
-        model_name=EMBEDDING_MODEL,
+    return OpenAIEmbeddings(
+        model=EMBEDDING_MODEL,
+        api_key=OPENROUTER_API_KEY,
+        base_url=OPENROUTER_BASE_URL,
     )
 
 

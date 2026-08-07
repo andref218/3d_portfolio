@@ -5,7 +5,13 @@ load_dotenv()
 
 # Embeddings
 
-EMBEDDING_MODEL = "BAAI/bge-small-en-v1.5"
+#Keeping it here temporarily for reference, but we are now using OpenRouter embeddings instead of HuggingFace embeddings.
+#EMBEDDING_MODEL = "BAAI/bge-small-en-v1.5"
+
+EMBEDDING_MODEL = getenv(
+    "EMBEDDING_MODEL",
+    "openai/text-embedding-3-small",
+)
 
 # Vector Database
 
