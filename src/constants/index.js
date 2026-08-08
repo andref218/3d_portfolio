@@ -19,7 +19,7 @@ export const navLinks = [
     link: "#skills",
   },
   {
-    name: "AI Assistant",
+    name: "My AI Assistant",
     link: "#portfolio-ai",
   },
 ];
