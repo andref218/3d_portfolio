@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-import { askPortfolioAI } from "../../lib/api";
+import { askPortfolioAI, wakeUpAPI } from "../../lib/api";
 
 import ChatInput from "./ChatInput";
 import ChatMessages, { Message } from "./ChatMessages";
@@ -10,6 +10,19 @@ import ChatMessages, { Message } from "./ChatMessages";
 export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isBackendReady, setIsBackendReady] = useState(false);
+
+  useEffect(() => {
+    async function wakeUp() {
+      try {
+        await wakeUpAPI();
+      } finally {
+        setIsBackendReady(true);
+      }
+    }
+
+    void wakeUp();
+  }, []);
 
   async function handleSendMessage(question: string) {
     if (!question.trim() || isLoading) return;
@@ -66,6 +79,12 @@ export default function Chat() {
             Ask me anything about André, his projects, experience, skills or AI
             journey.
           </p>
+          {!isBackendReady && (
+            <p className="mt-2 flex items-center gap-2 text-xs text-zinc-500">
+              <span className="h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
+              Waking up AI assistant... This may take up to a minute. ⚠️
+            </p>
+          )}
         </div>
 
         {/* Messages */}
