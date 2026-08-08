@@ -41,6 +41,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/health")
+def health():
+    """
+    Health check endpoint used to verify that the API is running.
+    """
+    return {"status": "ok"}
 
 @app.post("/chat", response_model=ChatResponse)
 @limiter.limit("20/hour")

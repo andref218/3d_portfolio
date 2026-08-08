@@ -12,6 +12,15 @@ export interface ChatResponse {
   answer: string;
 }
 
+export async function wakeUpAPI(): Promise<void> {
+  try {
+    await fetch(`${API_URL}/health`);
+  } catch {
+    // The request is only used to wake up the Render instance.
+    // If it fails, the normal chat request will still be attempted later.
+  }
+}
+
 export async function askPortfolioAI(question: string): Promise<string> {
   const response = await fetch(`${API_URL}/chat`, {
     method: "POST",

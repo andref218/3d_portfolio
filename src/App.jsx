@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import Hero from "./sections/Hero";
@@ -12,8 +12,12 @@ import Footer from "./sections/Footer";
 import About from "./sections/About";
 import Chat from "./components/Chat/Chat";
 import PortfolioAI from "./sections/PortfolioAssistantAI";
+import { wakeUpAPI } from "./lib/api";
 
 function App() {
+  useEffect(() => {
+    wakeUpAPI();
+  }, []);
   return (
     <>
       <NavBar />
