@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { getAsset } from "../utils/paths";
+import TitleHeader from "../components/TitleHeader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,10 +48,12 @@ const Showcase = () => {
   return (
     <section id="work" ref={sectionRef} className="app-showcase scroll-mt-5">
       <div className="w-full xl:mb-10">
-        <h2 className="text-center mb-20 text-2xl md:text-3xl lg:text-4xl text-white-50">
-          Some of my Work:
-        </h2>
-        <div className="showcaselayout">
+        <TitleHeader
+          title="Featured Projects"
+          sub="🚀 A selection of things I've built"
+        />
+
+        <div className="showcaselayout mt-15">
           {/* PROJECT 1 - Vynilz*/}
           <div className="project-card" ref={project1Ref}>
             <div className="project-image">
@@ -82,7 +85,10 @@ const Showcase = () => {
                 organize, and showcase their collections online, featuring
                 public profiles, achievements and much more.
               </p>
-              <div className="mt-4 bg-blue-400 w-fit px-3 py-1 rounded-lg text-black font-semibold text-sm">
+              <div
+                className="mt-4 w-fit rounded-lg border border-blue-400/20 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-200 backdrop-blur-sm transition-all 
+            duration-300 hover:border-blue-400/30 hover:bg-blue-500/15"
+              >
                 Next.js • MongoDB • Tailwind CSS • Discogs API • Google Auth
               </div>
             </div>
@@ -118,7 +124,10 @@ const Showcase = () => {
               relevant information from custom documents to generate accurate,
               context-aware responses using a local LLM.
             </p>
-            <div className="mt-4 bg-blue-400 w-fit px-3 py-1 rounded-lg text-black font-semibold text-sm">
+            <div
+              className="mt-4 w-fit rounded-lg border border-blue-400/20 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-200 backdrop-blur-sm transition-all 
+            duration-300 hover:border-blue-400/30 hover:bg-blue-500/15"
+            >
               Python • LangChain • Ollama • ChromaDB • Gradio
             </div>
           </div>
@@ -153,7 +162,10 @@ const Showcase = () => {
                 positions, built with Next.js, React.js, and Tailwind CSS.
               </p>
             </div>
-            <div className="mt-4 bg-blue-400 w-fit px-3 py-1 rounded-lg text-black font-semibold text-sm">
+            <div
+              className="mt-4 w-fit rounded-lg border border-blue-400/20 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-200 backdrop-blur-sm transition-all 
+            duration-300 hover:border-blue-400/30 hover:bg-blue-500/15"
+            >
               Next.js • MongoDB • TypeScript • Tailwind CSS • BetterAuth
             </div>
           </div>
@@ -189,7 +201,10 @@ const Showcase = () => {
               using QLoRA and PEFT, publishing the trained LoRA adapter on the
               Hugging Face Hub.
             </p>
-            <div className="mt-4 bg-blue-400 w-fit px-3 py-1 rounded-lg text-black font-semibold text-sm">
+            <div
+              className="mt-4 w-fit rounded-lg border border-blue-400/20 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-200 backdrop-blur-sm transition-all 
+            duration-300 hover:border-blue-400/30 hover:bg-blue-500/15"
+            >
               Python • Transformers • TRL • PEFT • QLoRA
             </div>
           </div>

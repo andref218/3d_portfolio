@@ -36,7 +36,7 @@ const PortfolioAI = () => {
   return (
     <section
       id="portfolio-ai"
-      className="relative flex-center section-padding mb-18 scroll-mt-25 overflow-hidden portfolio-ai-title"
+      className="relative flex-center section-padding mb-18 scroll-mt-35 overflow-hidden portfolio-ai-title"
     >
       <AuroraBackground />
 

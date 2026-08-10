@@ -27,8 +27,8 @@ export const navLinks = [
 export const words = [
   { text: "Ideas", imgPath: getAsset("/images/ideas.svg") },
   { text: "Concepts", imgPath: getAsset("/images/concepts.svg") },
-  { text: "Designs", imgPath: getAsset("/images/designs.svg") },
   { text: "Code", imgPath: getAsset("/images/code.svg") },
+  { text: "Designs", imgPath: getAsset("/images/designs.svg") },
   { text: "Ideas", imgPath: getAsset("/images/ideas.svg") },
   { text: "Concepts", imgPath: getAsset("/images/concepts.svg") },
   { text: "Designs", imgPath: getAsset("/images/designs.svg") },

@@ -43,10 +43,11 @@ export default function ChatInput({
         rows={1}
         value={question}
         disabled={isLoading}
-        placeholder="Ask me anything about André..."
+        placeholder="Ask me about André..."
         onChange={(e) => setQuestion(e.target.value)}
         onKeyDown={handleKeyDown}
-        className="max-h-40 flex-1 resize-none bg-transparent text-sm text-white outline-none placeholder:text-zinc-500"
+        className="max-h-40 flex-1 resize-none bg-transparent text-sm text-white outline-none 
+        placeholder:text-zinc-500 placeholder:whitespace-nowrap "
       />
 
       <button

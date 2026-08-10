@@ -76,7 +76,7 @@ const Journey = () => {
         />
 
         {/* Timeline + cards container */}
-        <div className="relative mt-15 mb-30 flex justify-center">
+        <div className="relative mt-15 mb-15 flex justify-center">
           <div className="max-w-6xl w-full flex relative">
             {/* Timeline vertical */}
             <div

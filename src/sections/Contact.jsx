@@ -107,7 +107,7 @@ const Contact = () => {
         <div className="mt-16 grid-12-cols">
           {/* LEFT: CONTACT FORM*/}
           <div className="xl:col-span-5">
-            <div className="flex-center card-border rounded-xl p-10">
+            <div className="flex-center rounded-xl border border-black-50 bg-black-100 p-10">
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
