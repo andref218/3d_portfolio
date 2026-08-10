@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { getAsset } from "../utils/paths";
 import TitleHeader from "../components/TitleHeader";
+import { FaGithub } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,7 +55,11 @@ const Showcase = () => {
         />
 
         <div className="showcaselayout mt-15">
-          {/* PROJECT 1 - Vynilz*/}
+          {/* 
+          Archived for now. Uncomment this block if i want to add Vynilz
+          back to the project showcase in the future.
+
+          PROJECT 1 - Vynilz*
           <div className="project-card" ref={project1Ref}>
             <div className="project-image">
               <a
@@ -75,11 +80,16 @@ const Showcase = () => {
                   href="https://github.com/andref218/vynilz-showcase"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white font-semibold hover:opacity-70 transition-opacity duration-300"
+                  className="text-white font-semibold hover:opacity-70 transition-opacity duration-300 underline"
                 >
-                  Vynilz – Build, Track & Showcase Your Vinyl Collection.
+                  Vynilz – Build, Track & Showcase Your Vinyl Collection
+                  <FaGithub
+                    size={22}
+                    className="ml-2 inline-block -translate-y-0.5"
+                  />
                 </a>
               </h2>
+
               <p className="text-white-50 md:text-xl">
                 A full-stack web application that helps vinyl collectors build,
                 organize, and showcase their collections online, featuring
@@ -93,46 +103,54 @@ const Showcase = () => {
               </div>
             </div>
           </div>
-
-          {/* PROJECT 2 - RAG Studio */}
-          <div className="project-card" ref={project2Ref}>
+          */}
+          {/* PROJECT 1 - DevQuest AI**/}
+          <div className="project-card" ref={project1Ref}>
             <div className="project-image">
               <a
-                href="https://github.com/andref218/rag_studio"
+                href="https://github.com/andref218/devquest_ai"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white font-semibold hover:opacity-70 transition-opacity duration-300"
               >
                 <img
-                  src={getAsset("/images/rag_studio_home_page.png")}
-                  alt="MERN User Management"
-                />
+                  src={getAsset("/gifs/devQuest_AI_demo.gif")}
+                  alt="DevQuest AI"
+                ></img>
               </a>
             </div>
-            <h2>
-              <a
-                href="https://github.com/andref218/rag_studio"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white font-semibold hover:opacity-70 transition-opacity duration-300"
-              >
-                RAG Studio - AI assistant powered by your own documents.
-              </a>
-            </h2>
-            <p className="text-white-50 md:text-xl mt-2">
-              A Retrieval-Augmented Generation (RAG) application that retrieves
-              relevant information from custom documents to generate accurate,
-              context-aware responses using a local LLM.
-            </p>
-            <div
-              className="mt-4 w-fit rounded-lg border border-blue-400/20 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-200 backdrop-blur-sm transition-all 
+            <div className="text-content">
+              <h2>
+                <a
+                  href="https://github.com/andref218/devquest_ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white font-semibold hover:opacity-70 transition-opacity duration-300 underline"
+                >
+                  DevQuest AI – Personalized Learning Through Multi-Agent AI
+                  <FaGithub
+                    size={22}
+                    className="ml-2 inline-block -translate-y-0.5"
+                  />
+                </a>
+              </h2>
+
+              <p className="text-white-50 md:text-xl">
+                An AI-powered learning platform that transforms software
+                engineering goals into personalized learning roadmaps, practical
+                coding quests, and AI-powered code reviews.
+              </p>
+              <div
+                className="mt-4 w-fit rounded-lg border border-blue-400/20 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-200 backdrop-blur-sm transition-all 
             duration-300 hover:border-blue-400/30 hover:bg-blue-500/15"
-            >
-              Python • LangChain • Ollama • ChromaDB • Gradio
+              >
+                Next.js • FastAPI • Python • TypeScript • Llama 3.2 • Ollama •
+                AI Agents
+              </div>
             </div>
           </div>
-          {/* PROJECT 3 - Job Application Tracker*/}
-          <div className="project-card" ref={project3Ref}>
+          {/* PROJECT 2 - Job Application Tracker */}
+          <div className="project-card" ref={project2Ref}>
             <div className="project-image">
               <a
                 href="https://job-application-tracker-azure-sigma.vercel.app/"
@@ -143,30 +161,75 @@ const Showcase = () => {
                 <img
                   src={getAsset("/images/jobApplicationTrackerHomePage.png")}
                   alt="Job Application Tracker"
-                ></img>
+                />
               </a>
             </div>
+
             <div className="text-content">
               <h2>
                 <a
                   href="https://github.com/andref218/job_application_tracker"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
+                  className="text-white font-semibold hover:opacity-70 transition-opacity duration-300 underline"
                 >
                   YourJobs - Organize and Track Your Job Applications
+                  <FaGithub
+                    size={22}
+                    className="ml-2 inline-block -translate-y-0.5"
+                  />
                 </a>
               </h2>
+
               <p className="text-white-50 md:text-xl">
                 A full-stack app to track job applications, manage companies and
                 positions, built with Next.js, React.js, and Tailwind CSS.
               </p>
             </div>
-            <div
-              className="mt-4 w-fit rounded-lg border border-blue-400/20 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-200 backdrop-blur-sm transition-all 
-            duration-300 hover:border-blue-400/30 hover:bg-blue-500/15"
-            >
+
+            <div className="mt-4 w-fit rounded-lg border border-blue-400/20 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-200 backdrop-blur-sm transition-all duration-300 hover:border-blue-400/30 hover:bg-blue-500/15">
               Next.js • MongoDB • TypeScript • Tailwind CSS • BetterAuth
+            </div>
+          </div>
+          {/* PROJECT 3 - RAG Studio */}
+          <div className="project-card" ref={project3Ref}>
+            <div className="project-image">
+              <a
+                href="https://github.com/andref218/rag_studio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white font-semibold hover:opacity-70 transition-opacity duration-300"
+              >
+                <img
+                  src={getAsset("/gifs/rag_studio_demo.gif")}
+                  alt="RAG Studio"
+                />
+              </a>
+            </div>
+
+            <h2>
+              <a
+                href="https://github.com/andref218/rag_studio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white font-semibold hover:opacity-70 transition-opacity duration-300 underline"
+              >
+                RAG Studio - AI assistant powered by your own documents
+                <FaGithub
+                  size={22}
+                  className="ml-2 inline-block -translate-y-0.5"
+                />
+              </a>
+            </h2>
+
+            <p className="text-white-50 md:text-xl mt-2">
+              A Retrieval-Augmented Generation (RAG) application that retrieves
+              relevant information from custom documents to generate accurate,
+              context-aware responses using a local LLM.
+            </p>
+
+            <div className="mt-4 w-fit rounded-lg border border-blue-400/20 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-200 backdrop-blur-sm transition-all duration-300 hover:border-blue-400/30 hover:bg-blue-500/15">
+              Python • LangChain • Ollama • ChromaDB • Gradio
             </div>
           </div>
           {/* PROJECT 4 - Llama 3.2 Customer Support Fine-Tuning*/}
@@ -191,9 +254,13 @@ const Showcase = () => {
                 href="https://github.com/andref218/llama3.2-customer-support-qlora"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white font-semibold hover:opacity-80 transition-opacity duration-300"
+                className="text-white font-semibold hover:opacity-80 transition-opacity duration-300 underline"
               >
                 Llama 3.2 Customer Support Fine-Tuning
+                <FaGithub
+                  size={22}
+                  className="ml-2 inline-block -translate-y-0.5"
+                />
               </a>
             </h2>
             <p className="text-white-50 md:text-xl  mt-2">
