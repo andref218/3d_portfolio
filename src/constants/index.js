@@ -22,6 +22,11 @@ export const navLinks = [
     name: "My AI Assistant",
     link: "#portfolio-ai",
   },
+  {
+    name: "GitHub",
+    link: "https://github.com/andref218",
+    isExternal: true,
+  },
 ];
 
 export const words = [
