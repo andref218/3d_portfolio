@@ -1,19 +1,25 @@
 # 3D Portfolio - Interactive Portfolio & AI Assistant
 
-This project is my personal **interactive portfolio**, built with **React, Vite, Three.js, and React Three Fiber**.
+This project is my personal **interactive portfolio**, built with **React, Vite, Tailwind CSS, Three.js, and React Three Fiber**.
 
 It combines a modern responsive interface with interactive 3D elements, animations, and a **RAG-powered AI assistant** that allows visitors to ask questions about my background, education, experience, skills, projects, and AI journey.
 
----
+## Live Portfolio 🌐
 
-## Live Demo 🌐
+<p align="center">
+  <a href="https://andref218.github.io/3d_portfolio/">
+    <img
+      src="https://img.shields.io/badge/Explore%20My%20Portfolio-%E2%86%92-111827?style=for-the-badge&logo=googlechrome&logoColor=60a5fa&labelColor=111827"
+      alt="Explore My Portfolio"
+    />
+  </a>
+</p>
 
-Check out my live portfolio:  
-[![Visit Portfolio](https://img.shields.io/badge/Live%20Portfolio-Visit%20Site-0ea5e9?style=for-the-badge&logo=googlechrome&logoColor=white)](https://andref218.github.io/3d_portfolio/)
-
-[![Portfolio Screenshot](./screenshots/3d_portfolio.png)](https://andref218.github.io/3d_portfolio/)
-
----
+<p align="center">
+  <a href="https://andref218.github.io/3d_portfolio/">
+    <img src="./screenshots/3d_portfolio_demo.gif" alt="3D Portfolio Demo">
+  </a>
+</p>
 
 ## AI Portfolio Assistant 🤖
 
