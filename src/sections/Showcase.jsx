@@ -144,7 +144,7 @@ const Showcase = () => {
                 className="mt-4 w-fit rounded-lg border border-blue-400/20 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-200 backdrop-blur-sm transition-all 
             duration-300 hover:border-blue-400/30 hover:bg-blue-500/15"
               >
-                Next.js • FastAPI • Python • TypeScript • Llama 3.2 • Ollama •
+                Next.js • TypeScript • Python • FastAPI • Llama 3.2 • Ollama •
                 AI Agents
               </div>
             </div>
@@ -188,7 +188,8 @@ const Showcase = () => {
             </div>
 
             <div className="mt-4 w-fit rounded-lg border border-blue-400/20 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-200 backdrop-blur-sm transition-all duration-300 hover:border-blue-400/30 hover:bg-blue-500/15">
-              Next.js • MongoDB • TypeScript • Tailwind CSS • BetterAuth
+              Next.js • MongoDB • TypeScript • Tailwind CSS • Sonner •
+              BetterAuth
             </div>
           </div>
           {/* PROJECT 3 - RAG Studio */}
@@ -229,7 +230,8 @@ const Showcase = () => {
             </p>
 
             <div className="mt-4 w-fit rounded-lg border border-blue-400/20 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-200 backdrop-blur-sm transition-all duration-300 hover:border-blue-400/30 hover:bg-blue-500/15">
-              Python • LangChain • Ollama • ChromaDB • Gradio
+              Python • LangChain • Ollama • Llama 3.2 • ChromaDB • Hugging Face
+              Embeddings • Gradio
             </div>
           </div>
           {/* PROJECT 4 - Llama 3.2 Customer Support Fine-Tuning*/}
@@ -272,7 +274,8 @@ const Showcase = () => {
               className="mt-4 w-fit rounded-lg border border-blue-400/20 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-200 backdrop-blur-sm transition-all 
             duration-300 hover:border-blue-400/30 hover:bg-blue-500/15"
             >
-              Python • Transformers • TRL • PEFT • QLoRA
+              Python • Transformers • TRL • PEFT • QLoRA • BitsAndBytes •
+              Hugging Face • Weights & Biases
             </div>
           </div>
         </div>
