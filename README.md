@@ -72,7 +72,15 @@ Portfolio Knowledge Base
 
 ### RAG Architecture
 
-The complete RAG pipeline follows these steps:
+The complete RAG pipeline is divided into two main stages: offline knowledge preparation and online retrieval and generation.
+
+<p align="center">
+  <img
+    src="./public/images/rag_ai_assistant_architecture.png"
+    alt="RAG AI Assistant Architecture"
+    width="100%"
+  />
+</p>
 
 1. **Knowledge Base**
 
@@ -104,11 +112,11 @@ The complete RAG pipeline follows these steps:
 
 7. **LLM Generation**
 
-   The resulting prompt is sent to the language model through **OpenRouter**, which generates the final response using the retrieved portfolio context.
+   The resulting prompt is sent to **OpenRouter (free)**, which routes the request to the selected language model to generate the final response using the retrieved portfolio context.
 
 8. **Response**
 
-   The generated answer is returned by the FastAPI backend to the React frontend and displayed in the AI Assistant chat.
+   The generated answer is returned by the **FastAPI backend** to the **React frontend** and displayed in the AI Assistant chat. The response is returned as a complete answer rather than streamed.
 
 ### Why RAG?
 
