@@ -23,7 +23,9 @@ const TechIcon = ({ model }) => {
     <Canvas>
       <ambientLight intensity={0.3} />
       <directionalLight position={[5, 5, 5]} intensity={0.5} />
-      <Environment preset="city" />
+      <Environment
+        files={`${import.meta.env.BASE_URL}/hdri/potsdamer_platz_1k.hdr`}
+      />
       <OrbitControls enableZoom={false} />
       <Float speed={10} rotationIntensity={0.8} floatIntensity={0.9}>
         <group scale={model.scale} rotation={model.rotation}>
