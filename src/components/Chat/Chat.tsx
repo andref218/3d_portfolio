@@ -10,14 +10,17 @@ import ChatMessages, { Message } from "./ChatMessages";
 export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [backendError, setBackendError] = useState(false);
   const [isBackendReady, setIsBackendReady] = useState(false);
 
   useEffect(() => {
     async function wakeUp() {
       try {
         await wakeUpAPI();
-      } finally {
         setIsBackendReady(true);
+      } catch (error) {
+        console.error("Failed to wake up API:", error);
+        setBackendError(true);
       }
     }
 
@@ -79,10 +82,16 @@ export default function Chat() {
             Ask me anything about André, his projects, experience, skills or AI
             journey.
           </p>
-          {!isBackendReady && (
+          {!isBackendReady && !backendError && (
             <p className="mt-2 flex items-center gap-2 text-xs text-zinc-500">
-              <span className="h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
+              <span className="h-2 w-2 animate-pulse rounded-full bg-blue-500"></span>
               Waking up AI assistant... This may take up to a minute. ⚠️
+            </p>
+          )}
+
+          {backendError && (
+            <p className="mt-2 text-xs text-red-400">
+              AI assistant is currently unavailable. Please try again later.
             </p>
           )}
         </div>
@@ -92,7 +101,11 @@ export default function Chat() {
 
         {/* Input */}
         <div className="border-t border-zinc-800 p-4">
-          <ChatInput onSendMessage={handleSendMessage} isLoading={isLoading} />
+          <ChatInput
+            onSendMessage={handleSendMessage}
+            isLoading={isLoading}
+            isBackendReady={isBackendReady}
+          />
         </div>
       </div>
     </div>

@@ -6,11 +6,13 @@ import { SendHorizontal } from "lucide-react";
 type ChatInputProps = {
   onSendMessage: (question: string) => void;
   isLoading: boolean;
+  isBackendReady: boolean;
 };
 
 export default function ChatInput({
   onSendMessage,
   isLoading,
+  isBackendReady,
 }: ChatInputProps) {
   const [question, setQuestion] = useState("");
 
@@ -19,7 +21,7 @@ export default function ChatInput({
 
     const trimmedQuestion = question.trim();
 
-    if (!trimmedQuestion || isLoading) return;
+    if (!trimmedQuestion || isLoading || !isBackendReady) return;
 
     onSendMessage(trimmedQuestion);
 
@@ -43,8 +45,12 @@ export default function ChatInput({
         <textarea
           rows={1}
           value={question}
-          disabled={isLoading}
-          placeholder="Ask me about André..."
+          disabled={isLoading || !isBackendReady}
+          placeholder={
+            isBackendReady
+              ? "Ask me about André..."
+              : "Waking up AI assistant..."
+          }
           onChange={(e) => setQuestion(e.target.value)}
           onKeyDown={handleKeyDown}
           className="max-h-40 flex-1 resize-none bg-transparent text-sm text-white outline-none 
@@ -53,7 +59,7 @@ export default function ChatInput({
 
         <button
           type="submit"
-          disabled={isLoading || !question.trim()}
+          disabled={isLoading || !isBackendReady || !question.trim()}
           className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white transition hover:bg-blue-500 
         disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
         >
